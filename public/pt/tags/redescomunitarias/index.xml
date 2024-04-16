@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RedesComunitarias on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/tags/redescomunitarias/</link>
+    <description>Recent content in RedesComunitarias on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/tags/redescomunitarias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testando Nova Versão do LibreMesh</title>
+      <link>http://localhost:1313/pt/posts/test-new-lime/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/test-new-lime/</guid>
+      <description>Motivação Testar roteadores com a versão mais recente do LibreMesh é crucial para as redes comunitárias que dependem de redes mesh como sua infraestrutura de comunicação. A importância reside no fato de que testes insuficientes dificultam o desenvolvimento de novas versões. Atualmente, a versão oficial do LibreMesh está vinculada ao lançamento de 2019 do OpenWRT. Essa limitação impede o progresso, pois avanços e melhorias frequentemente são deixados inexplorados. Ao realizar testes minuciosos com a versão mais recente, abrimos caminho para recursos aprimorados, maior estabilidade e melhor desempenho geral.</description>
+    </item>
+    <item>
+      <title>Como criar uma rede Libremesh com Servidor Lokal</title>
+      <link>http://localhost:1313/pt/posts/libremeshlokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/libremeshlokal/</guid>
+      <description>Lokal Como parte do projeto lokal, os testes com dois roteadores Archer A7 V5.8 e Unifi Mesh UAP-AC-M estão descritos abaixo&#xA;firmwares libremesh -&amp;gt; https://next.coolab.org/s/Eiz7r9xJKiXi8MA&#xA;Unifi Mesh UAP-AC-M Folha de dados Unifi -&amp;gt; http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf&#xA;Siga estes passos -&amp;gt; https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&amp;s[]=mesh#non-invasive_method_using_mtd&#xA;Breve&#xA;Vamos fazer o downgrade para uma versão mais antiga do firmware ubiquiti (ubnt.bin), instalar o firmware OpenWRT e, em seguida, instalar o firmware Libremesh.&#xA;Baixe o ubnt.bin da pasta md5sum BZ*.</description>
+    </item>
+    <item>
+      <title>Como Usar o Ubus no Libremesh</title>
+      <link>http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/</guid>
+      <description>Tutorial: Introdução ao Ubus no Libremesh para Iniciantes Passo 1: O que é Ubus e Libremesh O Ubus é uma ferramenta poderosa para gerenciar redes mesh baseadas em OpenWrt, como o Libremesh. Ele facilita a comunicação entre processos do sistema, fornecendo uma base completa de informações. Saiba mais sobre o Ubus e o Libremesh. Como o Ubus é um programa instalado dentro do roteador você precisa acessar o terminal do roteador Veja como fazer isso aqui</description>
+    </item>
+    <item>
+      <title>Acesso Remoto a Roteadores via SSH em redes libremesh</title>
+      <link>http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/</guid>
+      <description>Para acessar um roteador via SSH, siga os passos abaixo. Este guia assume que você está utilizando um sistema baseado em Linux, como Debian ou Ubuntu.&#xA;Pré-requisitos Antes de começar, é necessário ter o pacote openssh-client instalado em seu sistema. Este pacote permite que você inicie conexões SSH a partir do seu terminal.&#xA;Instalação do openssh-client&#xA;Abra o terminal e execute o comando abaixo para atualizar os pacotes do seu sistema e instalar o openssh-client:</description>
+    </item>
+  </channel>
+</rss>

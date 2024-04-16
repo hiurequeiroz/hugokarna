@@ -1,0 +1,72 @@
+<div class="banner">
+    {{ if isset .Params "image" }}
+    {{ $image := resources.GetMatch .Params.image }}
+    {{ if $image }}
+        {{ $image = $image.Crop "300x700 Center" }}
+        {{ with $image }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+        {{ end }}
+    {{ end }}
+{{ end }}
+</div>
+<div class="banner-mobile">
+    {{ if isset .Params "image" }}
+    {{ $image := resources.GetMatch .Params.image }}
+    {{ if $image }}
+        {{ $image = $image.Crop "150x250 Top" }}
+        {{ with $image }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+        {{ end }}
+    {{ end }}
+{{ end }}
+</div>
+<div class="post container">
+    <div class="post-content">
+        <div class="post-header-section">
+            <h1>{{ .Title }}</h1>
+        </div>
+
+        <div class="post-content">
+            <p>
+                {{ .Content }}
+            </p>
+            
+        </div>
+        
+    </div>
+    
+</div>
+<div class="full">
+    {{ if eq .Type "page" }} <!-- Verifica se é uma página do tipo 'page' -->
+    {{ if and .IsNode (eq .Kind "section") }} <!-- Verifica se é uma página de seção (como uma _index.md) -->
+        <div class="related-pages">
+            {{ $currentPath := .File.Dir }} <!-- Pega o diretório atual -->
+            {{ range (where .Site.RegularPages "File.Dir" $currentPath) }} <!-- Varre todas as páginas no mesmo diretório -->
+            <a href="{{ .RelPermalink }}">
+                <div class="page-highlight">
+                    <div class="page-container">
+                        {{ $image := resources.GetMatch .Params.image }}
+                        {{ if $image }}
+                            {{ with $image }}
+                                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+                            {{ end }}
+                        {{ end }}
+                        <h2>{{ .Title }}</h2> <!-- Título da página com link -->
+                </div>
+                <div class="page-description">
+                    {{ with .Params.description }} <!-- Verifica se existe uma descrição definida -->
+                <p>{{ . }}</p> <!-- Mostra a descrição -->
+                {{ end }}
+                </div>
+                
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    {{ else }} <!-- Para outras páginas, mostra o ícone de voltar -->
+        <a href="{{ if .Parent }}{{ .Parent.RelPermalink }}{{ else }}{{ .Site.BaseURL }}{{ end }}" class="back-icon">
+            <span data-feather="arrow-left"></span> Voltar
+        </a>
+    {{ end }}
+{{ end }}
+</div>

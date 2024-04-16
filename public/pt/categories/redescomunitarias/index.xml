@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redescomunitarias on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/categories/redescomunitarias/</link>
+    <description>Recent content in Redescomunitarias on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <atom:link href="http://localhost:1313/pt/categories/redescomunitarias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Usar o Ubus no LiMe/LROs</title>
+      <link>http://localhost:1313/pt/posts/utilizando-ubus-no-lime-lros/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/utilizando-ubus-no-lime-lros/</guid>
+      <description>Uma das maneiras mais poderosas de encontrar informações na sua rede mesh baseada em openwrt é utilizando o Ubus. Ele fornece uma comunicação entre processos do sistema reunindo assim uma base bem completa de informação. Como ele você pode consultar sobre os processos e caracteristicas do seu sistema como também modificalos.&#xA;Iniciando com Ubus Se simplesmente digitarmos ubus no terminal temos uma boa ideia de como ele funciona:&#xA;root@conteiner:~# ubus Usage: ubus [&amp;lt;options&amp;gt;] &amp;lt;command&amp;gt; [arguments.</description>
+    </item>
+  </channel>
+</rss>

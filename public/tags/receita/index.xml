@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Receita on Hiure Queiroz</title>
+    <link>http://localhost:1313/tags/receita/</link>
+    <description>Recent content in Receita on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 13 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/receita/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como fazer o pão selvagem</title>
+      <link>http://localhost:1313/posts/como-fazer-pao-selvagem/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/como-fazer-pao-selvagem/</guid>
+      <description>Uma das coisas que mais me deixa feliz é fazer pão. Gosto muito de mergulhar nas profundezas das proteínas e imaginar cada ligação química que pode estar sendo feita ou desfeita durante o processo. Para fazer pão eu entendi ao londo do tempo que é necessário paciência para chegar num resultado satisfatório. Paciência tanto para esperar o momento certo de fazer algo, de deixar que a química aconteça e também paciência para testar farinhas e achar o melhor fornecedor.</description>
+    </item>
+  </channel>
+</rss>

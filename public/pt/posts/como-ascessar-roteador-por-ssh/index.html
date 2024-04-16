@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Acesso Remoto a Roteadores via SSH em redes libremesh</title>
+    <meta name="description" content="Guia completo para acessar os roteador de uma rede com libremesh pela linha de comando">
+    <meta name="keywords" content='RedesComunitarias, libremesh'>
+
+    <meta property="og:url" content="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Acesso Remoto a Roteadores via SSH em redes libremesh">
+    <meta property="og:description" content="Guia completo para acessar os roteador de uma rede com libremesh pela linha de comando">
+    <meta property="og:image" content="http://localhost:1313/images/terminal.jpg">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/terminal.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acesso Remoto a Roteadores via SSH em redes libremesh">
+    <meta name="twitter:description" content="Guia completo para acessar os roteador de uma rede com libremesh pela linha de comando">
+    <meta property="twitter:domain" content="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">
+    <meta property="twitter:url" content="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">
+    <meta name="twitter:image" content="http://localhost:1313/images/terminal.jpg">
+
+    
+    <link rel="canonical" href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.8fc23566eb4c2080d022d7fb45da320f7853e9271a8433c0d50967ed0d3b7484.js" integrity="sha256-j8I1ZutMIIDQItf7RdoyD3hT6ScahDPA1Qln7Q07dIQ="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/pt/">
+                <img src='/images/perfil.png' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/pt/">Hiure Queiroz</a>
+        </div>
+
+        <div class="i18n">
+                
+<ul>
+  
+  <li>
+    <a href="/posts/como-ascessar-roteador-por-ssh/">
+        <div class="lang">
+            en  (348 words)
+        </div>
+        
+    </a>
+  </li>
+  
+</ul>
+
+
+
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> Sobre </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projetos </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="banner">
+    
+    
+    
+        
+        
+            <img src="/images/terminal_hu44667f039556e637f5043bc133e8f552_36333_300x700_crop_q75_box_center.jpg" width="250" height="224">
+        
+    
+
+</div>
+<div class="banner-mobile">
+    
+    
+    
+        
+        
+            <img src="/images/terminal_hu44667f039556e637f5043bc133e8f552_36333_150x250_crop_q75_box_top.jpg" width="150" height="224">
+        
+    
+
+</div>
+<div class="related-posts">
+    
+    
+        <h3>Related Posts</h3>
+        <ul>
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/test-new-lime/">Testando Nova Versão do LibreMesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/libremeshlokal/">Como criar uma rede Libremesh com Servidor Lokal</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">Como Usar o Ubus no Libremesh</a></li>
+                    
+                
+                    
+                
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/test-new-lime/">Testando Nova Versão do LibreMesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/libremeshlokal/">Como criar uma rede Libremesh com Servidor Lokal</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">Como Usar o Ubus no Libremesh</a></li>
+                    
+                
+                    
+                
+            
+        </ul>
+    
+</div>
+
+<div class="post container">
+    <div class="post-header-section">
+        <h1>Acesso Remoto a Roteadores via SSH em redes libremesh</h1>
+        <small role="doc-subtitle">Guia completo para acessar os roteador de uma rede com libremesh pela linha de comando</small>
+        <p class="post-date">junho 14, 2020
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/redescomunitarias">RedesComunitarias</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/libremesh">libremesh</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>Para acessar um roteador via SSH, siga os passos abaixo. Este guia assume que você está utilizando um sistema baseado em Linux, como Debian ou Ubuntu.</p>
+<h3 id="pré-requisitos">Pré-requisitos</h3>
+<p>Antes de começar, é necessário ter o pacote <a href="file:///home/hiure/gits/minhapagina/content/pt/posts/Como-ascessar-roteador-por-ssh.md#10%2C75-10%2C75">openssh-client</a> instalado em seu sistema. Este pacote permite que você inicie conexões SSH a partir do seu terminal.</p>
+<ol>
+<li>
+<p><strong>Instalação do openssh-client</strong></p>
+<p>Abra o terminal e execute o comando abaixo para atualizar os pacotes do seu sistema e instalar o <a href="file:///home/hiure/gits/minhapagina/content/pt/posts/Como-ascessar-roteador-por-ssh.md#10%2C75-10%2C75">openssh-client</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install openssh-client -y
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="conectando-se-ao-roteador">Conectando-se ao Roteador</h3>
+<ol start="2">
+<li>
+<p><strong>Acesso ao Roteador Atual</strong></p>
+<p>Para se conectar ao roteador ao qual seu computador está atualmente conectado, utilize o comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh root@thisnode.info
+</span></span></code></pre></div><p>Substitua <code>root</code> pelo nome de usuário adequado, se necessário.</p>
+</li>
+<li>
+<p><strong>Acesso a Outros Roteadores na Rede</strong></p>
+<ul>
+<li>
+<p><strong>Pelo Hostname:</strong></p>
+<p>Se você conhece o hostname do roteador ao qual deseja se conectar, use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh root@hostname-do-roteador
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Pelo IP:</strong></p>
+<p>Caso conheça o endereço IP do roteador, o comando é:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh root@ip-do-roteador
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="descobrindo-roteadores-na-rede">Descobrindo Roteadores na Rede</h3>
+<p>Se você não sabe o nome ou o IP do roteador que deseja acessar, é possível descobrir roteadores conectados na rede.</p>
+<ol start="4">
+<li>
+<p><strong>Listando Roteadores pela Interface Mesh</strong></p>
+<ul>
+<li>
+<p><strong>Encontrando pelo IP:</strong></p>
+<p>Para listar os IPs dos roteadores conectados via interface mesh, enquanto conectado a um roteador via SSH, execute:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh root@thisnode.info ip n | grep wlan0-mesh
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Encontrando pelo Nome:</strong></p>
+<p>Para obter os nomes, após estar conectado ao roteador via SSH, use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ip n | grep wlan0-mesh | mac2bat
+</span></span></code></pre></div><p>Isso mostrará uma lista de todos os roteadores conectados pela interface <code>wlan0-mesh</code>. Se essa interface não existir (por exemplo, em roteadores dual-band que não têm a interface de 2.4GHz ativada), tente usar <code>wlan1-mesh</code> ou, para roteadores específicos como o LibreRouter, <code>wlan2-mesh</code>.</p>
+<p>Alternativamente, você pode usar o comando <code>arp</code> para encontrar dispositivos pela interface mesh:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>arp | grep wlan0-mesh | mac2bat
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="notas-adicionais">Notas Adicionais</h3>
+<ul>
+<li>Lembre-se de substituir <code>root</code> pelo nome de usuário administrativo do roteador, se for diferente.</li>
+<li>Os comandos <code>mac2bat</code> e <code>arp</code> podem requerer instalação ou configuração adicional, dependendo do seu roteador e sistema operacional.</li>
+</ul>
+<p>Seguindo estes passos, você será capaz de acessar roteadores na sua rede via SSH, bem como descobrir outros dispositivos conectados.</p>
+
+        </p>
+
+        <div class="post-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hiurequeiroz-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+<div class="prev-post">
+    <p>
+        <a href="/pt/posts/como-fazer-pao-selvagem/">
+            &#8592;
+            Anterior:
+            Como fazer o pão selvagem
+        </a>
+    </p>
+    <p class="prev-post-date">
+        junho 13, 2020
+    </p>
+</div>
+
+
+
+<div class="next-post">
+    <p>
+        <a href="/pt/posts/utilizando-ubus-no-libremesh/">
+            Próximo:
+            Como Usar o Ubus no Libremesh
+            &#8594;
+        </a>
+    </p>
+        <p class="next-post-date">
+            fevereiro 14, 2021
+        </p>
+</div>
+
+
+            
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Hiure</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

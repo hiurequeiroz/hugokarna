@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/</link>
+    <description>Recent content on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testando Nova Versão do LibreMesh</title>
+      <link>http://localhost:1313/pt/posts/test-new-lime/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/test-new-lime/</guid>
+      <description>Motivação Testar roteadores com a versão mais recente do LibreMesh é crucial para as redes comunitárias que dependem de redes mesh como sua infraestrutura de comunicação. A importância reside no fato de que testes insuficientes dificultam o desenvolvimento de novas versões. Atualmente, a versão oficial do LibreMesh está vinculada ao lançamento de 2019 do OpenWRT. Essa limitação impede o progresso, pois avanços e melhorias frequentemente são deixados inexplorados. Ao realizar testes minuciosos com a versão mais recente, abrimos caminho para recursos aprimorados, maior estabilidade e melhor desempenho geral.</description>
+    </item>
+    <item>
+      <title>Como criar uma rede Libremesh com Servidor Lokal</title>
+      <link>http://localhost:1313/pt/posts/libremeshlokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/libremeshlokal/</guid>
+      <description>Lokal Como parte do projeto lokal, os testes com dois roteadores Archer A7 V5.8 e Unifi Mesh UAP-AC-M estão descritos abaixo&#xA;firmwares libremesh -&amp;gt; https://next.coolab.org/s/Eiz7r9xJKiXi8MA&#xA;Unifi Mesh UAP-AC-M Folha de dados Unifi -&amp;gt; http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf&#xA;Siga estes passos -&amp;gt; https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&amp;s[]=mesh#non-invasive_method_using_mtd&#xA;Breve&#xA;Vamos fazer o downgrade para uma versão mais antiga do firmware ubiquiti (ubnt.bin), instalar o firmware OpenWRT e, em seguida, instalar o firmware Libremesh.&#xA;Baixe o ubnt.bin da pasta md5sum BZ*.</description>
+    </item>
+    <item>
+      <title>Como Usar o Ubus no Libremesh</title>
+      <link>http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/</guid>
+      <description>Tutorial: Introdução ao Ubus no Libremesh para Iniciantes Passo 1: O que é Ubus e Libremesh O Ubus é uma ferramenta poderosa para gerenciar redes mesh baseadas em OpenWrt, como o Libremesh. Ele facilita a comunicação entre processos do sistema, fornecendo uma base completa de informações. Saiba mais sobre o Ubus e o Libremesh. Como o Ubus é um programa instalado dentro do roteador você precisa acessar o terminal do roteador Veja como fazer isso aqui</description>
+    </item>
+    <item>
+      <title>Acesso Remoto a Roteadores via SSH em redes libremesh</title>
+      <link>http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/</guid>
+      <description>Para acessar um roteador via SSH, siga os passos abaixo. Este guia assume que você está utilizando um sistema baseado em Linux, como Debian ou Ubuntu.&#xA;Pré-requisitos Antes de começar, é necessário ter o pacote openssh-client instalado em seu sistema. Este pacote permite que você inicie conexões SSH a partir do seu terminal.&#xA;Instalação do openssh-client&#xA;Abra o terminal e execute o comando abaixo para atualizar os pacotes do seu sistema e instalar o openssh-client:</description>
+    </item>
+    <item>
+      <title>Como fazer o pão selvagem</title>
+      <link>http://localhost:1313/pt/posts/como-fazer-pao-selvagem/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/como-fazer-pao-selvagem/</guid>
+      <description>Uma das coisas que mais me deixa feliz é fazer pão. Gosto muito de mergulhar nas profundezas das proteínas e imaginar cada ligação química que pode estar sendo feita ou desfeita durante o processo. Para fazer pão eu entendi ao londo do tempo que é necessário paciência para chegar num resultado satisfatório. Paciência tanto para esperar o momento certo de fazer algo, de deixar que a química aconteça e também paciência para testar farinhas e achar o melhor fornecedor.</description>
+    </item>
+    <item>
+      <title>Conhecendo o arduino</title>
+      <link>http://localhost:1313/pt/posts/arduino/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/arduino/</guid>
+      <description>Arduíno Arduíno é uma plataforma de prototipagem, ou seja, ele foi idealizado para servir de base para diferentes projetos que necessitem de circuitos eletrônicos microcontrolados, baseados em linguagem de programação C/C++. O microcontrolador é um pequeno computador que num único circuito integrado, já com núcleo de processador, memória e pinos de entrada e saída de informação. O Arduíno foi desenvolvido na cidade de Ivrea na Itália, o time era composto por Massimo Banzi, David Cuartielles, Tom Igoe, Gianluca Martino e David Mellis, com o objetivo de interagir com projetos escolares de maneira mais fácil e resiliente do que os sistemas de prototipagem dá época (2005).</description>
+    </item>
+    <item>
+      <title>Conhecendo o Esp32</title>
+      <link>http://localhost:1313/pt/posts/esp32/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/esp32/</guid>
+      <description>ESP32 O ESP32 é uma plataforma de prototipagem com microcontrolador, semelhante ao Arduino, porém com maior desempenho em aplicações que envolvem wifi e baixo consumo de energia. Ele representa uma evolução do conhecido ESP8266, oferecendo maior capacidade de processamento.&#xA;O ESP32 é um SOC (System on a Chip) que integra microcontrolador, wifi e bluetooth BLE. Desenvolvido pela Espressif Systems, o ESP32 possui características interessantes, como:&#xA;A placa contém o chip ESP32 com antena embutida, uma interface usb-serial e regulador de tensão de 3.</description>
+    </item>
+    <item>
+      <title>Libremesh</title>
+      <link>http://localhost:1313/pt/projects/libremesh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/libremesh/</guid>
+      <description>Libremesh Nos meandros das redes comunitárias de código aberto, o LibreMesh se destaca como uma ferramenta essencial para a construção de infraestruturas de rede autônomas e descentralizadas. Recentemente, a comunidade do LibreMesh fez um anúncio empolgante, revelando o lançamento de novas versões alinhadas com as últimas atualizações do OpenWrt. Esse desenvolvimento marca um passo crucial para acompanhar a rápida evolução do mercado de hardware de rede.&#xA;A importância dessa atualização não pode ser subestimada, especialmente em um ambiente onde novas versões de hardware estão constantemente sendo introduzidas.</description>
+    </item>
+    <item>
+      <title>Lokal</title>
+      <link>http://localhost:1313/pt/projects/lokal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/lokal/</guid>
+      <description>Lokal Eu desempenhei um papel crucial no projeto Lokal, focando na instalação e configuração do Libremesh nos roteadores para estabelecer uma rede mesh robusta. Essa configuração foi essencial para garantir a operação sem falhas do Lokal dentro de um ambiente de rede mesh. Para informaçẽs técnicas mais detalhadas sobre esse projeto, consulte este link.</description>
+    </item>
+    <item>
+      <title>Parceria Educacional</title>
+      <link>http://localhost:1313/pt/projects/parceriaeducacional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/parceriaeducacional/</guid>
+      <description>Tenho me dedicado a criar materiais educativos em iniciativas de aprendizado colaborativo, em parceria com a Digital Democracy, Artigo 19, APC e outras instituições. Juntos, na Coolab, criamos materiais educacionais inspiradores e impactantes, promovendo o conhecimento e a consciência em diversas áreas.</description>
+    </item>
+    <item>
+      <title>Projeto de Pesquisa: Comunicação de Baixa Potência para Tecnologia Social</title>
+      <link>http://localhost:1313/pt/projects/researchsocialtech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/researchsocialtech/</guid>
+      <description>Esboço da pesquisa Este projeto propõe o desenvolvimento de um framework inovador para a criação de tecnologia social direcionada a comunidades de baixa renda e/ou agricultores familiares de preferencia associados a redes comunitárias. O objetivo principal é conceber uma matriz tecnológica que inclua uma forma de comunicação analógica de baixo consumo energético entre sensores. Essa comunicação será viabilizada através da utilização de tecnologias de energia sustentável, como os geradores termoelétricos (TEG) e baterias de papel ativadas por água.</description>
+    </item>
+    <item>
+      <title>Rede Comunitária PSP</title>
+      <link>http://localhost:1313/pt/projects/psp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/psp/</guid>
+      <description>PSP é uma associação da sociedade civil que gerencia e mantém uma infraestrutura de telecomunicações comunitária no bairro dos Souzas, Monteiro Lobato - São Paulo, Brasil.&#xA;Esta foi a experiência mais vital do coletivo coolab em financiar e manter todas as necessidades técnicas de uma rede comunitária.&#xA;Veja o filme</description>
+    </item>
+    <item>
+      <title>Sitio Do Astronauta</title>
+      <link>http://localhost:1313/pt/projects/sitiodoastronauta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/sitiodoastronauta/</guid>
+      <description>Como idealizador do Sítio do Astronauta, um coletivo de artistas, ativistas e pesquisadores que trabalham com tecnologias livres e comunitárias, trago minha experiência acadêmica com ciencia e minha aprendizado em egenharia reversa com hackerativista. Percebendo a distância entre a academia e a sociedade, decidi criar este coletivo para comunicar e levar a ciência e a tecnologia de outra maneira para as comunidades. O Sitio do Astronauta foi concebido não apenas a partir da minha visão de explorar as fronteiras da tecnologia e da arte, mas também contou com a colaboração essencial de Marcela Guerra.</description>
+    </item>
+    <item>
+      <title>Sobre</title>
+      <link>http://localhost:1313/pt/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/about/</guid>
+      <description>Apaixonado por aprender coisas novas, me formei em Física e segui minha carreira acadêmica fazendo mestrado em Ciência dos Materiais no Instituto Tecnológico de Aeronáutica (ITA) e, depois, iniciando meu doutorado em Física, percebi que minha vida estava mais relacionada às comunidades do que à academia. Segui meu sonho de trabalhar com tecnologias e fundei o Sitio do Astronauta - Arte e tecnologia LTDA, um coletivo para estudo e desenvolvimento de ciência e tecnologias que impulsionam experiências de aprendizado e expressão artística.</description>
+    </item>
+    <item>
+      <title>Torre de Bambu</title>
+      <link>http://localhost:1313/pt/projects/torrebambu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/torrebambu/</guid>
+      <description>Introdução O projeto da torre de bambu foi patrocinado pela APC para compartilhar com o programa Conectar os Não Conectados.&#xA;Este projeto foi selecionado para o festival de cinema do Fórum da Internet em Estocolmo.&#xA;Veja o filme&#xA;Durante a pandemia de Covid-19, propus através dos grupos que me permeiam como coolab e PSP, prototipar uma construção de torre de bambu como uma contribuição específica para uma infraestrutura de Rede Comunitária mais inclusiva e localmente desenvolvida.</description>
+    </item>
+  </channel>
+</rss>

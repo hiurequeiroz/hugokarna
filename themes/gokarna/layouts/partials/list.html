@@ -1,0 +1,32 @@
+<div class="banner">
+    {{ $image := resources.Get "/images/posts.jpg" }}
+    {{ if $image }}
+        {{ $image = $image.Crop "300x700 Center" }}
+        {{ with $image }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+        {{ end }}
+{{ end }}
+</div>
+<div class="banner-mobile">
+    {{ $image := resources.Get "/images/posts.jpg" }}
+    {{ if $image }}
+        {{ $image = $image.Crop "150x250 Top" }}
+        {{ with $image }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+        {{ end }}
+{{ end }}
+</div>
+<div class="container list-posts">
+
+    <h1 class="list-title">{{ .Name }}</h1>
+
+    {{ range (where .Pages "Params.type" "post" ).GroupByDate "2006" }}
+
+    <h2 class="posts-year">{{ .Key }}</h2>
+
+    {{- range .Pages -}}
+        {{- partial "list-posts.html" . -}}
+    {{ end }}
+    {{ end }}
+
+</div>

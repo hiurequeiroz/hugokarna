@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Conhecendo o Esp32</title>
+    <meta name="description" content="Como iniciar com o ESP32">
+    <meta name="keywords" content='blog, ESP32, SitioDoAstronauta, IoT'>
+
+    <meta property="og:url" content="http://localhost:1313/pt/posts/esp32/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Conhecendo o Esp32">
+    <meta property="og:description" content="Como iniciar com o ESP32">
+    <meta property="og:image" content="http://localhost:1313/images/esp32.jpg">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/esp32.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conhecendo o Esp32">
+    <meta name="twitter:description" content="Como iniciar com o ESP32">
+    <meta property="twitter:domain" content="http://localhost:1313/pt/posts/esp32/">
+    <meta property="twitter:url" content="http://localhost:1313/pt/posts/esp32/">
+    <meta name="twitter:image" content="http://localhost:1313/images/esp32.jpg">
+
+    
+    <link rel="canonical" href="http://localhost:1313/pt/posts/esp32/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.8fc23566eb4c2080d022d7fb45da320f7853e9271a8433c0d50967ed0d3b7484.js" integrity="sha256-j8I1ZutMIIDQItf7RdoyD3hT6ScahDPA1Qln7Q07dIQ="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/pt/">
+                <img src='/images/perfil.png' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/pt/">Hiure Queiroz</a>
+        </div>
+
+        <div class="i18n">
+                
+<ul>
+  
+  <li>
+    <a href="/posts/esp32/">
+        <div class="lang">
+            en  (140 words)
+        </div>
+        
+    </a>
+  </li>
+  
+</ul>
+
+
+
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> Sobre </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projetos </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="banner">
+    
+    
+    
+        
+        
+            <img src="/images/esp32_hua9f220730db3cde54c1a90ae16c23e1e_91550_300x700_crop_q75_box_center.jpg" width="300" height="640">
+        
+    
+
+</div>
+<div class="banner-mobile">
+    
+    
+    
+        
+        
+            <img src="/images/esp32_hua9f220730db3cde54c1a90ae16c23e1e_91550_150x250_crop_q75_box_top.jpg" width="150" height="250">
+        
+    
+
+</div>
+<div class="related-posts">
+    
+    
+        <h3>Related Posts</h3>
+        <ul>
+            
+                
+                
+                    
+                
+            
+                
+                
+                    
+                
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/arduino/">Conhecendo o arduino</a></li>
+                    
+                
+                    
+                
+            
+                
+                
+                    
+                
+            
+        </ul>
+    
+</div>
+
+<div class="post container">
+    <div class="post-header-section">
+        <h1>Conhecendo o Esp32</h1>
+        <small role="doc-subtitle">Como iniciar com o ESP32</small>
+        <p class="post-date">fevereiro 7, 2019
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/blog">blog</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/esp32">ESP32</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/sitiodoastronauta">SitioDoAstronauta</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/iot">IoT</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="esp32">ESP32</h2>
+<p>O ESP32 é uma plataforma de prototipagem com microcontrolador, semelhante ao <a href="/pt/posts/arduino/">Arduino</a>, porém com maior desempenho em aplicações que envolvem wifi e baixo consumo de energia. Ele representa uma evolução do conhecido ESP8266, oferecendo maior capacidade de processamento.</p>
+<p>O ESP32 é um SOC (System on a Chip) que integra microcontrolador, wifi e bluetooth BLE. Desenvolvido pela Espressif Systems, o ESP32 possui características interessantes, como:</p>
+<p><img alt="Placa ESP32" src="/images/Modulo-ESP32-DEV-Module.png"></p>
+<p>A placa contém o chip ESP32 com antena embutida, uma interface usb-serial e regulador de tensão de 3.3V. A programação pode ser realizada em LUA ou utilizando a IDE do Arduino com um cabo micro-usb. Com 4 MB de memória flash, o ESP32 possibilita a criação de diversas aplicações para projetos de IoT, acesso remoto, servidores web e registradores de dados, entre outros.</p>
+<p>Referências:</p>
+<ul>
+<li><a href="https://www.arduinoecia.com.br/2017/11/modulo-esp32-wifi-bluetooth-ide-arduino.html">Arduino e Cia - Módulo ESP32 WiFi Bluetooth IDE Arduino</a></li>
+<li><a href="https://pt.wikipedia.org/wiki/ESP32">Wikipedia - ESP32</a></li>
+<li><a href="http://espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf">Datasheet ESP32</a></li>
+</ul>
+
+        </p>
+
+        <div class="post-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hiurequeiroz-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+
+
+<div class="next-post">
+    <p>
+        <a href="/pt/posts/arduino/">
+            Próximo:
+            Conhecendo o arduino
+            &#8594;
+        </a>
+    </p>
+        <p class="next-post-date">
+            fevereiro 7, 2019
+        </p>
+</div>
+
+
+            
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Hiure</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino on Hiure Queiroz</title>
+    <link>http://localhost:1313/tags/arduino/</link>
+    <description>Recent content in Arduino on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 07 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conhecendo o arduino</title>
+      <link>http://localhost:1313/posts/arduino/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/arduino/</guid>
+      <description>Arduíno Arduíno é uma plataforma de prototipagem, ou seja, ele foi idealizado para servir de base para diferentes projetos que necessitem de circuitos eletrônicos microcontrolados, baseados em linguagem de programação C/C++. O microcontrolador é um pequeno computador que num único circuito integrado, já com núcleo de processador, memória e pinos de entrada e saída de informação. O Arduíno foi desenvolvido na cidade de Ivrea na Itália, o time era composto por Massimo Banzi, David Cuartielles, Tom Igoe, Gianluca Martino e David Mellis, com o objetivo de interagir com projetos escolares de maneira mais fácil e resiliente do que os sistemas de prototipagem dá época (2005).</description>
+    </item>
+  </channel>
+</rss>

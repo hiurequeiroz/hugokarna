@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Impressora3d on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/categories/impressora3d/</link>
+    <description>Recent content in Impressora3d on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <atom:link href="http://localhost:1313/pt/categories/impressora3d/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pt/posts/calibrando-a-temperatura-do-filamento/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/calibrando-a-temperatura-do-filamento/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pt/posts/calibrando-diametro-do-filamento-para-impressora3d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/calibrando-diametro-do-filamento-para-impressora3d/</guid>
+      <description>Para calibrar o filamento vamos precisar de um paquimetro. O paquimetro é uma ferramenta impressindivel para quem quer usar impressora 3D. Não é uma ferramenta muito barata, mas compensa muito se você está pensando em ter uma impressora devidamente calibrada, sobre tudo se quer modelar peças.&#xA;1.1 Calculando o diametro médio do filamento Pegue o rolo de filamento e estique ele por volta de 1m (isso porque ele pode variar muito dentro nesse intervalo)</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pt/posts/como-calibrar-devidamente-uma-impressora-3d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/como-calibrar-devidamente-uma-impressora-3d/</guid>
+      <description>Este material está dividido em duas partes principais, para calibrar muito bem uma impressora.&#xA;1.Calibrando o filamento Calibrar o filamento é uma atividade constante que você deve fazer (se você quiser uma impressão excelente!). Toda vez que eu compro um filamento eu faço todos esses passos para garantir o melhor desepenho da impressão.&#xA;Calibrar o filamento significa calibrar o diâmetro (muitas vezes o diâmentro varia para caramba) e calibrar a temperatura ideal para esse filamento.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pt/posts/preparando-um-gcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/preparando-um-gcode/</guid>
+      <description>Com um arquivo stl em mãos (seja desenhado ou retirado de algum banco de imagens) vamos utilizar um software de fatiamento para criar um arquivo gcode, que é o formato que a impressora 3D normalmente lê (temos ainda a opção do arquivo .gco).&#xA;O arquivo gcode nada mais é do que um monte de informação para a impressora saber onde ela vai depositar material, qual quantidade de material vai ser depositada e qual a velocidade que ela precisa passar em cada ponto para isso acontecer.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pt/posts/primeiros-passos-com-a-impressora-3d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/primeiros-passos-com-a-impressora-3d/</guid>
+      <description>Impressora 3D é um universo muito amplo hoje, com diferentes tipos de tecnologias, e a cada dia aparece uma nova. Veja um bom texto aqui Nesse texto vou falar das impressoras FDM (Modelagem por fusão e depósito), onde um material em filamento, normalente 1,75mm é estrudado para modelagem de uma peça tridimensional, camada a camada.&#xA;Isso se dá em praticamente três passos:&#xA;Desenhar uma peça&#xA;Você pode desenhar uma peça de maneira muito simples utilizando o tinkercad, um pouquinho mais complexo utilizando blender ou pode ainda ou adiquirir em um banco de peças 3d</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/tags/</link>
+    <description>Recent content in Tags on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Libremesh</title>
+      <link>http://localhost:1313/pt/tags/libremesh/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/libremesh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RedesComunitarias</title>
+      <link>http://localhost:1313/pt/tags/redescomunitarias/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/redescomunitarias/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lokal</title>
+      <link>http://localhost:1313/pt/tags/lokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/lokal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pão</title>
+      <link>http://localhost:1313/pt/tags/p%C3%A3o/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/p%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Receita</title>
+      <link>http://localhost:1313/pt/tags/receita/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/receita/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino</title>
+      <link>http://localhost:1313/pt/tags/arduino/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/arduino/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/pt/tags/blog/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ESP32</title>
+      <link>http://localhost:1313/pt/tags/esp32/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/esp32/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IoT</title>
+      <link>http://localhost:1313/pt/tags/iot/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SitioDoAstronauta</title>
+      <link>http://localhost:1313/pt/tags/sitiodoastronauta/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/tags/sitiodoastronauta/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

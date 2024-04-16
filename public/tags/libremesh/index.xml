@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Libremesh on Hiure Queiroz</title>
+    <link>http://localhost:1313/tags/libremesh/</link>
+    <description>Recent content in Libremesh on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/libremesh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing New LibreMesh Release</title>
+      <link>http://localhost:1313/posts/test-new-lime/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/test-new-lime/</guid>
+      <description>Motivation Testing routers with the latest version of LibreMesh is crucial for community networks that rely on mesh networks as their communication infrastructure. The significance lies in the fact that insufficient testing hinders the development of newer versions. Currently, the official version of LibreMesh is tied to the 2019 release of OpenWRT. This limitation impedes progress, as advancements and improvements are often left unexplored. By conducting thorough tests with the most recent version, we pave the way for enhanced features, increased stability, and better overall performance.</description>
+    </item>
+    <item>
+      <title>How to create a Libremesh network with Lokal Server</title>
+      <link>http://localhost:1313/posts/libremeshlokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/libremeshlokal/</guid>
+      <description>Lokal As part of the lokal projetct the tests with two routers the Archer A7 V5.8 and Unifi Mesh UAP-AC-M are described below&#xA;libremesh firmwares -&amp;gt; https://next.coolab.org/s/Eiz7r9xJKiXi8MA&#xA;Unifi Mesh UAP-AC-M Unifi datasheet -&amp;gt; http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf&#xA;Follow this steps -&amp;gt; https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&amp;s[]=mesh#non-invasive_method_using_mtd&#xA;Breif&#xA;We&amp;rsquo;re going to downgrade to older ubiquiti firmware version (ubnt.bin), install OpenWRT firmware, then install Libremesh firmware.&#xA;Download ubnt.bin from the folder md5sum BZ*.bin should return: 5bb23b387defcbd1f6cda5819c7905e5 mv BZ*.bin ubnt.bin static IP (192.</description>
+    </item>
+    <item>
+      <title>How to Use Ubus in Libremesh</title>
+      <link>http://localhost:1313/posts/how-to-use-ubus-in-libremesh/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-use-ubus-in-libremesh/</guid>
+      <description>Introduction to Ubus in Libremesh for Beginners Step 1: What is Ubus and Libremesh Ubus is a powerful tool for managing mesh networks based on OpenWrt, such as Libremesh. It facilitates communication between system processes, providing a comprehensive information base. Learn more about Ubus and Libremesh. Since Ubus is a program installed within the router, you need to access the router&amp;rsquo;s terminal See how to do it here&#xA;Step 2: Basic Ubus Commands To get started, you can use the ubus list command to list available objects and ubus call to invoke a specific service.</description>
+    </item>
+    <item>
+      <title>Acesso Remoto a Roteadores via SSH em redes libremesh</title>
+      <link>http://localhost:1313/posts/como-ascessar-roteador-por-ssh/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/como-ascessar-roteador-por-ssh/</guid>
+      <description>Para acessar um roteador via SSH, siga os passos abaixo. Este guia assume que você está utilizando um sistema baseado em Linux, como Debian ou Ubuntu.&#xA;Pré-requisitos Antes de começar, é necessário ter o pacote openssh-client instalado em seu sistema. Este pacote permite que você inicie conexões SSH a partir do seu terminal.&#xA;Instalação do openssh-client&#xA;Abra o terminal e execute o comando abaixo para atualizar os pacotes do seu sistema e instalar o openssh-client:</description>
+    </item>
+  </channel>
+</rss>

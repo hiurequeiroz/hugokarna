@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiure Queiroz</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing New LibreMesh Release</title>
+      <link>http://localhost:1313/posts/test-new-lime/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/test-new-lime/</guid>
+      <description>Motivation Testing routers with the latest version of LibreMesh is crucial for community networks that rely on mesh networks as their communication infrastructure. The significance lies in the fact that insufficient testing hinders the development of newer versions. Currently, the official version of LibreMesh is tied to the 2019 release of OpenWRT. This limitation impedes progress, as advancements and improvements are often left unexplored. By conducting thorough tests with the most recent version, we pave the way for enhanced features, increased stability, and better overall performance.</description>
+    </item>
+    <item>
+      <title>How to create a Libremesh network with Lokal Server</title>
+      <link>http://localhost:1313/posts/libremeshlokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/libremeshlokal/</guid>
+      <description>Lokal As part of the lokal projetct the tests with two routers the Archer A7 V5.8 and Unifi Mesh UAP-AC-M are described below&#xA;libremesh firmwares -&amp;gt; https://next.coolab.org/s/Eiz7r9xJKiXi8MA&#xA;Unifi Mesh UAP-AC-M Unifi datasheet -&amp;gt; http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf&#xA;Follow this steps -&amp;gt; https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&amp;s[]=mesh#non-invasive_method_using_mtd&#xA;Breif&#xA;We&amp;rsquo;re going to downgrade to older ubiquiti firmware version (ubnt.bin), install OpenWRT firmware, then install Libremesh firmware.&#xA;Download ubnt.bin from the folder md5sum BZ*.bin should return: 5bb23b387defcbd1f6cda5819c7905e5 mv BZ*.bin ubnt.bin static IP (192.</description>
+    </item>
+    <item>
+      <title>How to Use Ubus in Libremesh</title>
+      <link>http://localhost:1313/posts/how-to-use-ubus-in-libremesh/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-use-ubus-in-libremesh/</guid>
+      <description>Introduction to Ubus in Libremesh for Beginners Step 1: What is Ubus and Libremesh Ubus is a powerful tool for managing mesh networks based on OpenWrt, such as Libremesh. It facilitates communication between system processes, providing a comprehensive information base. Learn more about Ubus and Libremesh. Since Ubus is a program installed within the router, you need to access the router&amp;rsquo;s terminal See how to do it here&#xA;Step 2: Basic Ubus Commands To get started, you can use the ubus list command to list available objects and ubus call to invoke a specific service.</description>
+    </item>
+    <item>
+      <title>Acesso Remoto a Roteadores via SSH em redes libremesh</title>
+      <link>http://localhost:1313/posts/como-ascessar-roteador-por-ssh/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/como-ascessar-roteador-por-ssh/</guid>
+      <description>Para acessar um roteador via SSH, siga os passos abaixo. Este guia assume que você está utilizando um sistema baseado em Linux, como Debian ou Ubuntu.&#xA;Pré-requisitos Antes de começar, é necessário ter o pacote openssh-client instalado em seu sistema. Este pacote permite que você inicie conexões SSH a partir do seu terminal.&#xA;Instalação do openssh-client&#xA;Abra o terminal e execute o comando abaixo para atualizar os pacotes do seu sistema e instalar o openssh-client:</description>
+    </item>
+    <item>
+      <title>Como fazer o pão selvagem</title>
+      <link>http://localhost:1313/posts/como-fazer-pao-selvagem/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/como-fazer-pao-selvagem/</guid>
+      <description>Uma das coisas que mais me deixa feliz é fazer pão. Gosto muito de mergulhar nas profundezas das proteínas e imaginar cada ligação química que pode estar sendo feita ou desfeita durante o processo. Para fazer pão eu entendi ao londo do tempo que é necessário paciência para chegar num resultado satisfatório. Paciência tanto para esperar o momento certo de fazer algo, de deixar que a química aconteça e também paciência para testar farinhas e achar o melhor fornecedor.</description>
+    </item>
+    <item>
+      <title>Conhecendo o arduino</title>
+      <link>http://localhost:1313/posts/arduino/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/arduino/</guid>
+      <description>Arduíno Arduíno é uma plataforma de prototipagem, ou seja, ele foi idealizado para servir de base para diferentes projetos que necessitem de circuitos eletrônicos microcontrolados, baseados em linguagem de programação C/C++. O microcontrolador é um pequeno computador que num único circuito integrado, já com núcleo de processador, memória e pinos de entrada e saída de informação. O Arduíno foi desenvolvido na cidade de Ivrea na Itália, o time era composto por Massimo Banzi, David Cuartielles, Tom Igoe, Gianluca Martino e David Mellis, com o objetivo de interagir com projetos escolares de maneira mais fácil e resiliente do que os sistemas de prototipagem dá época (2005).</description>
+    </item>
+    <item>
+      <title>Getting to Know the Esp32</title>
+      <link>http://localhost:1313/posts/esp32/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/esp32/</guid>
+      <description>ESP32 The ESP32 is a prototyping platform with a microcontroller, similar to Arduino, but with higher performance in applications involving wifi and low power consumption. It represents an evolution of the well-known ESP8266, offering greater processing capacity.&#xA;The ESP32 is a System on a Chip (SOC) that integrates a microcontroller, wifi, and bluetooth BLE. Developed by Espressif Systems, the ESP32 has interesting features, such as:&#xA;The board contains the ESP32 chip with a built-in antenna, a usb-serial interface, and a 3.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>Passionate about learning new things, I graduated in Physics and pursued my academic career by doing a master&amp;rsquo;s degree in Materials Science at the Aeronautics Institute of Technology (ITA) and later starting my PhD in Physics, I realized that my life was more related to communities than academia. I followed my dream of working with technologies and founded the Astronaut&amp;rsquo;s Site - Art and Technology LTDA, a collective for the study and development of science and technologies that drive learning experiences and artistic expression.</description>
+    </item>
+    <item>
+      <title>Bamboo Tower</title>
+      <link>http://localhost:1313/projects/torrebambu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/torrebambu/</guid>
+      <description>Introduction The bamboo tower project was sponsored by APC to share with the Connect the Unconnected program.&#xA;This project was selected for the Internet Forum Film Festival in Stockholm.&#xA;Watch the movie&#xA;During the Covid-19 pandemic, I proposed through the groups that permeate me like coolab and PSP, prototyping a bamboo tower construction as a specific contribution to a more inclusive and locally developed Community Network infrastructure.&#xA;First, I did a lot of research on the subject and the possibility of building a bamboo tower.</description>
+    </item>
+    <item>
+      <title>Libremesh</title>
+      <link>http://localhost:1313/projects/libremesh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/libremesh/</guid>
+      <description>Libremesh In the realm of open-source community networks, LibreMesh stands out as an essential tool for building autonomous and decentralized network infrastructures. Recently, the LibreMesh community made an exciting announcement, revealing the release of new versions aligned with the latest updates from OpenWrt. This development marks a crucial step in keeping pace with the rapid evolution of the network hardware market.&#xA;The significance of this update cannot be underestimated, especially in an environment where new hardware versions are constantly being introduced.</description>
+    </item>
+    <item>
+      <title>Lokal</title>
+      <link>http://localhost:1313/projects/lokal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/lokal/</guid>
+      <description>Lokal I played a crucial role in the Lokal project, focusing on the installation and configuration of Libremesh on the routers to establish a robust mesh network. This setup was essential for ensuring the seamless operation of Lokal within a mesh network environment. For detailed technical insights into this aspect of the project, please refer to this link.</description>
+    </item>
+    <item>
+      <title>Parceria Educacional</title>
+      <link>http://localhost:1313/projects/parceriaeducacional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/parceriaeducacional/</guid>
+      <description>I have been dedicated to creating educational materials in collaborative learning initiatives, in partnership with Digital Democracy, Article 19, APC, and other institutions. Together, at Coolab, we create inspiring and impactful educational materials, promoting knowledge and awareness in various areas.</description>
+    </item>
+    <item>
+      <title>Rede Comunitária PSP</title>
+      <link>http://localhost:1313/projects/psp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/psp/</guid>
+      <description>PSP is a civil society association that manages and maintains a community telecommunication infrastructure in the Souzas neighborhood, Monteiro Lobato - São Paulo, Brazil.&#xA;This was the coolab collective&amp;rsquo;s most vital experience in funding and maintaining all the technical needs of a community network.&#xA;See the movie</description>
+    </item>
+    <item>
+      <title>Research Project: Low Power Communication for Social Technology</title>
+      <link>http://localhost:1313/projects/researchsocialtech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/researchsocialtech/</guid>
+      <description>Draft Project This project proposes the development of an innovative framework for creating social technology aimed at low-income communities and/or family farmers preferably associated with community networks. The main objective is to design a technological matrix that includes a form of low-power analog communication between sensors. This communication will be enabled through the use of sustainable energy technologies, such as thermoelectric generators (TEGs) and water-activated paper batteries.&#xA;The inclusion of these communities in community network ecosystems is essential, as these networks provide a collaborative environment and knowledge exchange, allowing communities to access groups involved in the connectivity process in their territories.</description>
+    </item>
+    <item>
+      <title>Sitio Do Astronauta</title>
+      <link>http://localhost:1313/projects/sitiodoastronauta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sitiodoastronauta/</guid>
+      <description>As the creator of Sítio do Astronauta, a collective of artists, activists, and researchers working with free and community technologies, I bring my academic experience in science and my learning in reverse engineering as a hacktivist. Realizing the gap between academia and society, I decided to create this collective to communicate and bring science and technology to communities in a different way. Sítio do Astronauta was conceived not only from my vision of exploring the frontiers of technology and art but also with the essential collaboration of Marcela Guerra.</description>
+    </item>
+  </channel>
+</rss>

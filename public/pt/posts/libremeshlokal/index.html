@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Como criar uma rede Libremesh com Servidor Lokal</title>
+    <meta name="description" content="Guia completo sobre como criar uma rede mesh com Lokal como servidor para conteúdo, mídia e muito mais">
+    <meta name="keywords" content='RedesComunitarias, libremesh, lokal'>
+
+    <meta property="og:url" content="http://localhost:1313/pt/posts/libremeshlokal/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Como criar uma rede Libremesh com Servidor Lokal">
+    <meta property="og:description" content="Guia completo sobre como criar uma rede mesh com Lokal como servidor para conteúdo, mídia e muito mais">
+    <meta property="og:image" content="http://localhost:1313/images/lokal.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/lokal.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Como criar uma rede Libremesh com Servidor Lokal">
+    <meta name="twitter:description" content="Guia completo sobre como criar uma rede mesh com Lokal como servidor para conteúdo, mídia e muito mais">
+    <meta property="twitter:domain" content="http://localhost:1313/pt/posts/libremeshlokal/">
+    <meta property="twitter:url" content="http://localhost:1313/pt/posts/libremeshlokal/">
+    <meta name="twitter:image" content="http://localhost:1313/images/lokal.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/pt/posts/libremeshlokal/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.8fc23566eb4c2080d022d7fb45da320f7853e9271a8433c0d50967ed0d3b7484.js" integrity="sha256-j8I1ZutMIIDQItf7RdoyD3hT6ScahDPA1Qln7Q07dIQ="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/pt/">
+                <img src='/images/perfil.png' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/pt/">Hiure Queiroz</a>
+        </div>
+
+        <div class="i18n">
+                
+<ul>
+  
+  <li>
+    <a href="/posts/libremeshlokal/">
+        <div class="lang">
+            en  (918 words)
+        </div>
+        
+    </a>
+  </li>
+  
+</ul>
+
+
+
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> Sobre </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projetos </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="banner">
+    
+    
+    
+        
+        
+            <img src="/images/lokal_hu25a39865a3d30b2a3862c14f502d705e_460470_300x700_crop_box_center_3.png" width="300" height="700">
+        
+    
+
+</div>
+<div class="banner-mobile">
+    
+    
+    
+        
+        
+            <img src="/images/lokal_hu25a39865a3d30b2a3862c14f502d705e_460470_150x250_crop_box_top_3.png" width="150" height="250">
+        
+    
+
+</div>
+<div class="related-posts">
+    
+    
+        <h3>Related Posts</h3>
+        <ul>
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/test-new-lime/">Testando Nova Versão do LibreMesh</a></li>
+                    
+                
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">Como Usar o Ubus no Libremesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">Acesso Remoto a Roteadores via SSH em redes libremesh</a></li>
+                    
+                
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/test-new-lime/">Testando Nova Versão do LibreMesh</a></li>
+                    
+                
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">Como Usar o Ubus no Libremesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">Acesso Remoto a Roteadores via SSH em redes libremesh</a></li>
+                    
+                
+            
+                
+                
+                    
+                
+            
+        </ul>
+    
+</div>
+
+<div class="post container">
+    <div class="post-header-section">
+        <h1>Como criar uma rede Libremesh com Servidor Lokal</h1>
+        <small role="doc-subtitle">Guia completo sobre como criar uma rede mesh com Lokal como servidor para conteúdo, mídia e muito mais</small>
+        <p class="post-date">junho 14, 2023
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/redescomunitarias">RedesComunitarias</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/libremesh">libremesh</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/lokal">lokal</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h2 id="lokal">Lokal</h2>
+<p>Como parte do <a href="https://wakoma.co/lokal/">projeto lokal</a>, os testes com dois roteadores Archer A7 V5.8 e Unifi Mesh UAP-AC-M estão descritos abaixo</p>
+<p>firmwares libremesh -&gt; <a href="https://next.coolab.org/s/Eiz7r9xJKiXi8MA">https://next.coolab.org/s/Eiz7r9xJKiXi8MA</a></p>
+<h3 id="unifi-mesh-uap-ac-m">Unifi Mesh UAP-AC-M</h3>
+<p>Folha de dados Unifi -&gt; <a href="http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf">http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf</a></p>
+<p>Siga estes passos -&gt; <a href="https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&s[]=mesh#non-invasive_method_using_mtd">https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&s[]=mesh#non-invasive_method_using_mtd</a></p>
+<p>Breve</p>
+<p>Vamos fazer o downgrade para uma versão mais antiga do firmware ubiquiti (ubnt.bin), instalar o firmware OpenWRT e, em seguida, instalar o firmware Libremesh.</p>
+<ol>
+<li>Baixe o ubnt.bin da pasta</li>
+</ol>
+<ul>
+<li>md5sum BZ*.bin deve retornar: 5bb23b387defcbd1f6cda5819c7905e5</li>
+<li>mv BZ*.bin ubnt.bin</li>
+</ul>
+<ol start="2">
+<li>
+<p>IP estático (192.168.1.0/24, não use IP 192.168.1.20 ou 192.168.1.1 para o computador, se não tiver certeza, use o IP 192.168.1.10, máscara de rede 255.255.255.0, gateway padrão 192.168.1.1 para o PC)</p>
+</li>
+<li>
+<p>Copie o Firmware Unifi do seu Linux-PC para o dispositivo Unifi: scp ubnt.bin <a href="mailto:ubnt@192.168.1.20">ubnt@192.168.1.20</a>:/tmp/ (a senha també
+I had a problem with traefik and transmission&rsquo;s password so I had to install thism é ubnt)</p>
+</li>
+<li>
+<p>SSH no dispositivo Unifi ssh <a href="mailto:ubnt@192.168.1.20">ubnt@192.168.1.20</a> (a senha também é ubnt)</p>
+</li>
+<li>
+<p>No seu dispositivo Unifi, emita o comando fwupdate.real -m /tmp/ubnt.bin. Deixe o dispositivo Unifi reiniciar.</p>
+</li>
+<li>
+<p>scp o Firmware OpenWrt para o dispositivo Unifi scp openwrt-ath79-generic-ubnt_unifiac-XXX-squashfs-sysupgrade.bin <a href="mailto:ubnt@192.168.1.20">ubnt@192.168.1.20</a>:/tmp/</p>
+</li>
+<li>
+<p>SSH no dispositivo Unifi e: <code>mtd write /tmp/openwrt-xxxxx-squashfs-sysupgrade.bin kernel0</code>, depois também apague a partição não utilizada <code>mtd erase kernel1</code></p>
+</li>
+<li>
+<p>Descubra qual partição é chamada de “bs”: cat /proc/mtd, o resultado esperado é “mtd4”. Em seguida, emita este comando no dispositivo Unifi (use o nome da partição obtido para bs): dd if=/dev/zero bs=1 count=1 of=/dev/mtd4</p>
+</li>
+<li>
+<p>Na próxima reinicialização, você verá um firmware openwrt.</p>
+<p>mude o IP estático de volta para DHCP. Desconecte e reconecte o cabo de rede.</p>
+</li>
+<li>
+<p>No openwrt vá para upload de firmware e faça o upload do firmware Libremesh</p>
+<p>vá para o navegador. 192.168.1.1
+nome de usuário: root
+senha: vazia</p>
+<p>Sistema&raquo; Voltar/Flash Firmware</p>
+<p>Flash Image
+Navegue até o libremesh squash
+Upload</p>
+<p>Deixe todas as 3 caixas desmarcadas
+clique em continuar</p>
+<p>Após a atualização, vá para thisnode.info</p>
+</li>
+<li>
+<p>Criar Nova Rede</p>
+</li>
+</ol>
+<p>Escolha um nome para rede: lokal.network
+PW: Phubert pw</p>
+<p>Choose a name for the node: uap-ac-mesh</p>
+<h3 id="archer-a7-v58">Archer A7 V5.8</h3>
+<ol>
+<li>
+<p>Conecte o cabo LAN do PC à porta LAN-1 do roteador</p>
+</li>
+<li>
+<p>Abra um navegador e acesse o endereço padrão da TP-Link http://192.168.0.1
+Você será solicitado a criar uma senha na primeira abertura. Defina uma nova senha e faça login.</p>
+</li>
+<li>
+<p>Você deverá ver a página de acesso do roteador. Selecione: Avançado/Ferramentas do Sistema/Atualização de Firmware</p>
+</li>
+<li>
+<p>Selecione: Atualização Manual/Navegar: Selecione o arquivo baixado da seção &ldquo;Instalação do Firmware OpenWrt&rdquo; openwrt-22.03.5-ath79-generic-tplink_archer-a7-v5-squashfs-factory.bin</p>
+</li>
+<li>
+<p>Aguarde até que a atualização do firmware seja concluída. Não interrompa o processo - risco de danificar o roteador!</p>
+</li>
+<li>
+<p>Após a conclusão da atualização, você verá &ldquo;página não encontrada&rdquo;. Isso é normal.</p>
+</li>
+<li>
+<p>Desconecte e reconecte o cabo de rede, e abra no navegador o endereço padrão do OpenWRT: http://192.168.1.1 (configurações manuais do cartão LAN: ip4:192.168.1.122/máscara:255.255.255.0/gateway:192.168.1.1 )</p>
+</li>
+<li>
+<p>Da atualização do OpenWRT com o Libremesh</p>
+<p>Sistema &raquo; Backup/Atualização de Firmware
+Imagem de Firmware
+Navegue até librerouteros squashfs-sysupgrade.bin
+Upload</p>
+<p>Deixe todas as 3 caixas desmarcadas
+clique em continuar</p>
+</li>
+</ol>
+<h3 id="archer-c7-v5">Archer C7 V5</h3>
+<ol>
+<li>
+<p>Conecte o cabo LAN do PC à porta LAN-1 do roteador</p>
+</li>
+<li>
+<p>Abra um navegador e acesse o endereço padrão da TP-Link http://192.168.0.1
+Você será solicitado a criar uma senha na primeira abertura. Defina uma nova senha e faça login.</p>
+</li>
+<li>
+<p>Você deverá ver a página de acesso do roteador. Selecione: Avançado/Ferramentas do Sistema/Atualização de Firmware</p>
+</li>
+<li>
+<p>Selecione: Atualização Manual/Navegar: Selecione o arquivo baixado da seção &ldquo;Instalação do Firmware OpenWrt&rdquo; openwrt-22.03.5-ath79-generic-tplink_archer-a7-v5-squashfs-factory.bin (use a versão C7 deste arquivo)</p>
+</li>
+<li>
+<p>Aguarde até que a atualização do firmware seja concluída. Não interrompa o processo - risco de danificar o roteador!</p>
+</li>
+<li>
+<p>Após a conclusão da atualização, você verá &ldquo;página não encontrada&rdquo;. Isso é normal.</p>
+</li>
+<li>
+<p>Desconecte e reconecte o cabo de rede e abra no navegador o endereço padrão do OpenWRT: http://192.168.1.1 (configurações manuais do cartão LAN: ip4:192.168.1.122/máscara:255.255.255.0/gateway:192.168.1.1 )</p>
+</li>
+<li>
+<p>Da atualização do OpenWRT com o Libremesh
+Sistema &raquo; Backup/Atualização de Firmware</p>
+<p>Imagem de Firmware
+Navegue até libremesh squashfs-sysupgrade.bin
+Upload</p>
+<p>Deixe todas as 3 caixas desmarcadas
+clique em continuar</p>
+</li>
+</ol>
+<h3 id="ansible-install">Ansible install</h3>
+<p>python3 -m venv venv
+source venv/bin/activate
+pip install ansible
+ansible-playbook -i hosts/preparar prepare.yml
+ansible-playbook -i hosts/nucserver.yml playbook.yml</p>
+<h3 id="certificados">Certificados</h3>
+<p>Os certificados tem sido tema para debate nos <a href="https://communitynetworks.group/t/anyone-using-https-in-a-cn/286/26">foruns de redes comunitárias</a>. E o melhor método para isso até agora que estamos desenvolvendo é o compartilhado pelo<a href="https://geekrewind.com/generate-free-wildcard-certificates-using-lets-encrypt-certbot-on-ubuntu-18-04/"> geekrewind</a>.</p>
+<p>Os passos são:</p>
+<p>Com o certbot instalado rode o comando:</p>
+<p><code>sudo certbot certonly --manual --preferred-challenges=dns --email hiure@riseup.net --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d redepsp.info -d *.redepsp.info</code></p>
+<p>Adicione registros txt de acordo com as instruções do certbot</p>
+<p><code>sudo certbot certificates</code></p>
+<p><code>mv fullchain.pem redepsp.info.crt</code></p>
+<p><code>openssl pkey -in privkey.pem -out redepsp.info.key</code></p>
+<p>Copie os certificados para a pasta do host do Ansible</p>
+<p><code>cp redepsp.info* hosts/ </code></p>
+<h3 id="configurações-do-ansible">Configurações do Ansible</h3>
+<p>Instruções - <a href="https://docs.lokal.network/gettingstarted/">https://docs.lokal.network/gettingstarted/</a></p>
+<p>Clone o repositório e remova o arquivo ansible.cfg</p>
+<p><code>git clone https://github.com/Wakoma/Lokal.git</code></p>
+<p><code>rm ansible.cfg</code></p>
+<p>rode o comando;</p>
+<p><code>ansible-galaxy install -r requirements.yml</code></p>
+<p>Edite o arquivo <code>hosts/preparar</code></p>
+<pre tabindex="0"><code>all:
+  hosts: &#34;10.208.191.255&#34;
+  vars:
+    app_user: psp
+    ansible_user: root
+    setup_ssh: true
+    ssh_key: ssh-rsa 
+</code></pre><p>e rode o comando:</p>
+<p><code>ansible-playbook -i hosts/preparar prepare.yml</code></p>
+<p>Edite o arquivo <code>hosts/nucserver</code></p>
+<pre tabindex="0"><code>all:
+  hosts: &#34;10.208.191.255&#34;
+  vars:
+    ssl_cert: &#34;hosts/redepsp.info.cert&#34;
+    ssl_key: &#34;hosts/redepsp.info.key&#34;
+    domain: redepsp.info
+    email_admin: hiure@riseup.net
+    password_admin: strong-password
+    lokal_secret: nui3fhAoiSDUndakd12
+    ansible_user: psp
+    services:
+        - kiwix
+        - wordpress
+        - jellyfin
+        - calibre
+    project_root: /home/psp
+</code></pre><p>e rode o comando:</p>
+<p><code>ansible-playbook -i hosts/nucserver.yml playbook.yml</code></p>
+<h4 id="adicionando-subdomínio-ao-wordpress">Adicionando subdomínio ao wordpress</h4>
+<p>no arquivo <code>roles/wordpress/defaults/main.yml</code></p>
+<p>adicione o seu subdomio:</p>
+<p><code>subdomain_wordpress: lokal</code></p>
+<h3 id="configurar-o-dnsmasq">Configurar o Dnsmasq</h3>
+<p>Edite o arquivo <code>/etc/config/lime-community</code> e adicione o seu domínio.</p>
+<pre tabindex="0"><code>config lime &#39;system&#39;
+	option domain &#39;redepsp.info&#39;
+
+config lime &#39;network&#39;
+
+config lime &#39;wifi&#39;
+	option ap_ssid &#39;PSP&#39;
+	option apname_ssid &#39;PSP/%H&#39;
+</code></pre><p>Aplique as configurações:</p>
+<p><code>lime-config</code></p>
+<p>Se nenhum erro for retornado, use:</p>
+<p><code>lime-apply</code></p>
+<p>Edite o arquivo dnsmasq <code>/etc/dnsmasq.d/lokal.conf</code></p>
+<pre tabindex="0"><code>cname=lokal.redepsp.info,lokal
+cname=wiki.redepsp.info,lokal.redepsp.info
+cname=souzaflix.redepsp.info,lokal.redepsp.info
+cname=biblioteca.redepsp.info,lokal.redepsp.info
+cname=torrent.redepsp.info,lokal.redepsp.info
+cname=router.redepsp.info,lokal.redepsp.info
+</code></pre><p>restart dnsmasq service</p>
+<p><code>/etc/init.d/dnsmasq restart</code></p>
+<h3 id="pirania-config">Pirania config</h3>
+<p>Edite o arquivo pirania em <code>/etc/config/pirania</code></p>
+<ul>
+<li>to add the destination page to redirect to, change the <code>option portal_domain</code> line to your domain and the <code>option url_portal</code> line to <code>/</code></li>
+<li>to catch all clients, change the <code>list catch_interfaces</code></li>
+<li>to change the portal open time <code>option duration_m</code>.</li>
+</ul>
+<p>Exemplo:</p>
+<pre tabindex="0"><code>config base_config &#39;base_config&#39;
+	option prune_expired_for_days &#39;30&#39;
+	option portal_domain &#39;lokal.redepsp.info&#39;
+	option url_auth &#39;/portal/auth.html&#39;
+	option url_authenticated &#39;/portal/authenticated.html&#39;
+	option url_info &#39;/portal/info.html&#39;
+	option url_fail &#39;/portal/fail.html&#39;
+	option db_path &#39;/etc/pirania/vouchers/&#39;
+	option hooks_path &#39;/etc/pirania/hooks/&#39;
+	option append_ipt_rules &#39;0&#39;
+	list allowlist_ipv4 &#39;10.0.0.0/8&#39;
+	list allowlist_ipv4 &#39;172.16.0.0/12&#39;
+	list allowlist_ipv4 &#39;192.168.0.0/16&#39;
+	list allowlist_ipv6 &#39;fc00::/7&#39;
+	list allowlist_ipv6 &#39;fe80::/64&#39;
+	list allowlist_ipv6 &#39;2a00:1508:0a00::/40&#39;
+	list catch_interfaces &#39;br-lan&#39;
+	list catch_interfaces &#39;anygw&#39;
+	option enabled &#39;1&#39;
+	option with_vouchers &#39;0&#39;
+
+config access_mode &#39;read_for_access&#39;
+	option url_portal &#39;/&#39;
+	option duration_m &#39;15&#39;
+</code></pre><p>Depois disso rode:
+<code>captive portal stop &amp; captive-portal start</code></p>
+<h2 id="diversos">Diversos</h2>
+<p>Tive um problema com a senha do traefik e do transmission, então tive que instalar isso</p>
+<p><code>pip install --upgrade passlib</code></p>
+<h3 id="nextcloud---jellyfin-integrations">Nextcloud - Jellyfin integrations</h3>
+<p>jellyfin compose</p>
+<pre tabindex="0"><code>    volumes:
+      - &#34;{{project_root}}/jellyfin/config:/config&#34;
+      - &#34;{{project_root}}/jellyfin/data:/data&#34;
+      - &#34;{{project_root}}/base/transmission/data:/media:ro&#34;
+      - &#34;/media/nextcloud:/nextcloud:ro&#34;
+      
+</code></pre><p>sudo mount &ndash;bind ~/nextcloud/data/data/admin/files/public/ /media/nextcloud</p>
+
+        </p>
+
+        <div class="post-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hiurequeiroz-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+<div class="prev-post">
+    <p>
+        <a href="/pt/posts/utilizando-ubus-no-libremesh/">
+            &#8592;
+            Anterior:
+            Como Usar o Ubus no Libremesh
+        </a>
+    </p>
+    <p class="prev-post-date">
+        fevereiro 14, 2021
+    </p>
+</div>
+
+
+
+<div class="next-post">
+    <p>
+        <a href="/pt/posts/test-new-lime/">
+            Próximo:
+            Testando Nova Versão do LibreMesh
+            &#8594;
+        </a>
+    </p>
+        <p class="next-post-date">
+            fevereiro 15, 2024
+        </p>
+</div>
+
+
+            
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Hiure</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

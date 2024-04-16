@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Testando Nova Versão do LibreMesh</title>
+    <meta name="description" content="Uma documentação sobre os testes da nova versão do LibreMesh no Novo Relatório de Hardware.">
+    <meta name="keywords" content='RedesComunitarias, libremesh'>
+
+    <meta property="og:url" content="http://localhost:1313/pt/posts/test-new-lime/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Testando Nova Versão do LibreMesh">
+    <meta property="og:description" content="Uma documentação sobre os testes da nova versão do LibreMesh no Novo Relatório de Hardware.">
+    <meta property="og:image" content="http://localhost:1313/images/libremesh.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/libremesh.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Testando Nova Versão do LibreMesh">
+    <meta name="twitter:description" content="Uma documentação sobre os testes da nova versão do LibreMesh no Novo Relatório de Hardware.">
+    <meta property="twitter:domain" content="http://localhost:1313/pt/posts/test-new-lime/">
+    <meta property="twitter:url" content="http://localhost:1313/pt/posts/test-new-lime/">
+    <meta name="twitter:image" content="http://localhost:1313/images/libremesh.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/pt/posts/test-new-lime/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.8fc23566eb4c2080d022d7fb45da320f7853e9271a8433c0d50967ed0d3b7484.js" integrity="sha256-j8I1ZutMIIDQItf7RdoyD3hT6ScahDPA1Qln7Q07dIQ="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/pt/">
+                <img src='/images/perfil.png' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/pt/">Hiure Queiroz</a>
+        </div>
+
+        <div class="i18n">
+                
+<ul>
+  
+  <li>
+    <a href="/posts/test-new-lime/">
+        <div class="lang">
+            en  (2274 words)
+        </div>
+        
+    </a>
+  </li>
+  
+</ul>
+
+
+
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> Sobre </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projetos </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="banner">
+    
+    
+    
+        
+        
+            <img src="/images/libremesh_huf4fb851349a1034c9eeddd45b879b0bc_13350_300x700_crop_box_center_3.png" width="150" height="200">
+        
+    
+
+</div>
+<div class="banner-mobile">
+    
+    
+    
+        
+        
+            <img src="/images/libremesh_huf4fb851349a1034c9eeddd45b879b0bc_13350_150x250_crop_box_top_3.png" width="150" height="200">
+        
+    
+
+</div>
+<div class="related-posts">
+    
+    
+        <h3>Related Posts</h3>
+        <ul>
+            
+                
+                
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/libremeshlokal/">Como criar uma rede Libremesh com Servidor Lokal</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">Como Usar o Ubus no Libremesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">Acesso Remoto a Roteadores via SSH em redes libremesh</a></li>
+                    
+                
+            
+                
+                
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/libremeshlokal/">Como criar uma rede Libremesh com Servidor Lokal</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">Como Usar o Ubus no Libremesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">Acesso Remoto a Roteadores via SSH em redes libremesh</a></li>
+                    
+                
+            
+        </ul>
+    
+</div>
+
+<div class="post container">
+    <div class="post-header-section">
+        <h1>Testando Nova Versão do LibreMesh</h1>
+        <small role="doc-subtitle">Uma documentação sobre os testes da nova versão do LibreMesh no Novo Relatório de Hardware.</small>
+        <p class="post-date">fevereiro 15, 2024
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/redescomunitarias">RedesComunitarias</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/libremesh">libremesh</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="motivação">Motivação</h3>
+<p>Testar roteadores com a versão mais recente do LibreMesh é crucial para as redes comunitárias que dependem de redes mesh como sua infraestrutura de comunicação. A importância reside no fato de que testes insuficientes dificultam o desenvolvimento de novas versões. Atualmente, a versão oficial do LibreMesh está vinculada ao lançamento de 2019 do OpenWRT. Essa limitação impede o progresso, pois avanços e melhorias frequentemente são deixados inexplorados. Ao realizar testes minuciosos com a versão mais recente, abrimos caminho para recursos aprimorados, maior estabilidade e melhor desempenho geral. É por meio desses testes que identificamos e abordamos possíveis problemas, garantindo uma plataforma robusta e confiável para as redes comunitárias. Avançar além da versão 2019 do OpenWRT abre oportunidades para inovação e mantém o LibreMesh na vanguarda da tecnologia de redes mesh. Portanto, um esforço conjunto nos testes é essencial para impulsionar a evolução do LibreMesh e contribuir para o crescimento contínuo das redes de comunicação baseadas em mesh impulsionadas pela comunidade.#</p>
+<p><a href="https://downloads.libremesh.org/development/master-ow23.05.0/">https://downloads.libremesh.org/development/master-ow23.05.0/</a></p>
+<h3 id="dispositivos-testados">Dispositivos Testados</h3>
+<h4 id="eap225-outdoor-v3">Eap225-outdoor v3</h4>
+<p><img src="https://static.tp-link.com/upload/image-line/EAP225-Outdoor_normal_20230821083554a.png"></p>
+<p>Testar o roteador TP-Link EAP225-Outdoor V3 é motivado pela crescente demanda por soluções wireless robustas em redes comunitárias, especialmente em ambientes externos como parques. A motivação surge do desejo de enfrentar os desafios únicos apresentados por ambientes externos e acomodar um alto volume de usuários simultaneamente. O EAP225-Outdoor V3 se apresenta como uma solução potencial, projetada para fornecer conectividade Wi-Fi confiável em espaços externos com foco em escalabilidade e desempenho. Notavelmente, destaca-se como a opção mais econômica em sua categoria, tornando-se uma escolha atraente para redes comunitárias com restrições orçamentárias. Testar este roteador em cenários de redes comunitárias torna-se essencial para garantir sua compatibilidade com condições externas e sua capacidade de lidar efetivamente com a carga de usuários esperada. Ao realizar testes minuciosos, os administradores de rede podem verificar a adequação do EAP225-Outdoor V3 para áreas externas impulsionadas pela comunidade, contribuindo para a criação de redes wireless acessíveis e confiáveis em espaços públicos.</p>
+<p>Este equipamento teve um processo relativamente simples para instalar o LibreMesh. Seguindo a documentação fornecida pelo OpenWrt, o sistema funcionou normalmente.</p>
+<p>Passos</p>
+<p>1 - Ligue e defina seu IP para 192.168.0.1 e o gateway para 192.168.0.254.
+2 - Faça login na página da web e habilite o acesso SSH, em seguida, faça login usando SSH.
+3 - SSH no roteador (ssh <a href="mailto:user@192.168.0.254">user@192.168.0.254</a>) e execute <code>cliclientd stopcs</code>.
+4 - Faça o upload do firmware com um nome curto (menos de 63 caracteres).</p>
+<p>O roteador então se juntou à malha disponível na comunidade com uma versão mais antiga do Lime.</p>
+<p>Problemas</p>
+<p>1 - <code>thisnode.info</code> não está funcionando devido a um problema de SSL; às vezes precisamos usar explicitamente HTTP.
+2 - O assistente de primeira inicialização não está funcionando.
+3 - O suporte remoto não está funcionando, retornando &ldquo;Por favor, verifique se o pacote <code>ubus-tmate</code> está instalado.&rdquo;
+4 - O acesso ao voucher não está funcionando; no console do navegador, retorna &ldquo;Uncaught (in promise) TypeError: Cannot read properties of null (reading &lsquo;sort&rsquo;).&rdquo;</p>
+<ul>
+<li>
+<p>Oficial Page - <a href="https://www.tp-link.com/us/business-networking/ceiling-mount-access-point/eap225-outdoor/">https://www.tp-link.com/us/business-networking/ceiling-mount-access-point/eap225-outdoor/</a></p>
+</li>
+<li>
+<p>Ref. <a href="https://openwrt.org/toh/tp-link/eap225">https://openwrt.org/toh/tp-link/eap225</a></p>
+</li>
+</ul>
+<h3 id="cpe510-v3">CPE510 v3</h3>
+<p><img src="https://openwrt.org/_media/media/tplink/cpe210.png"></p>
+<p>Testar o roteador TP-Link EAP225-Outdoor V3 é motivado pela crescente demanda por soluções wireless robustas em redes comunitárias, especialmente em ambientes externos como parques. A motivação surge do desejo de enfrentar os desafios únicos apresentados por ambientes externos e acomodar um alto volume de usuários simultaneamente. O EAP225-Outdoor V3 se apresenta como uma solução potencial, projetada para fornecer conectividade Wi-Fi confiável em espaços externos com foco em escalabilidade e desempenho. Notavelmente, destaca-se como a opção mais econômica em sua categoria, tornando-se uma escolha atraente para redes comunitárias com restrições orçamentárias. Testar este roteador em cenários de redes comunitárias torna-se essencial para garantir sua compatibilidade com condições externas e sua capacidade de lidar efetivamente com a carga de usuários esperada. Ao realizar testes minuciosos, os administradores de rede podem verificar a adequação do EAP225-Outdoor V3 para áreas externas impulsionadas pela comunidade, contribuindo para a criação de redes wireless acessíveis e confiáveis em espaços públicos.</p>
+<p>Este equipamento teve um processo relativamente simples para instalar o LibreMesh. Seguindo a documentação fornecida pelo OpenWrt, o sistema funcionou normalmente.</p>
+<p>Passos</p>
+<p>1 - Ligue e defina seu IP para 192.168.0.1 e o gateway para 192.168.0.254.
+2 - Faça login na página da web e habilite o acesso SSH, em seguida, faça login usando SSH.
+3 - SSH no roteador (ssh <a href="mailto:user@192.168.0.254">user@192.168.0.254</a>) e execute <code>cliclientd stopcs</code>.
+4 - Faça o upload do firmware com um nome curto (menos de 63 caracteres).</p>
+<p>O roteador então se juntou à malha disponível na comunidade com uma versão mais antiga do Lime.</p>
+<p>Problemas</p>
+<p>1 - <code>thisnode.info</code> não está funcionando devido a um problema de SSL; às vezes precisamos usar explicitamente HTTP.
+2 - O assistente de primeira inicialização não está funcionando.
+3 - O suporte remoto não está funcionando, retornando &ldquo;Por favor, verifique se o pacote <code>ubus-tmate</code> está instalado.&rdquo;
+4 - O acesso ao voucher não está funcionando; no console do navegador, retorna &ldquo;Uncaught (in promise) TypeError: Cannot read properties of null (reading &lsquo;sort&rsquo;).&rdquo;</p>
+<p>Apesar dos problemas encontrados, este roteador funcionou muito bem no roadmap do libremesh e esses problemas já foram resolvidos e em breve teremos um sistema completo.</p>
+<ul>
+<li>
+<p>Oficial page - <a href="https://www.tp-link.com/en/business-networking/outdoor-radio/cpe510/v3/">https://www.tp-link.com/en/business-networking/outdoor-radio/cpe510/v3/</a></p>
+</li>
+<li>
+<p>Ref.
+1 - <a href="https://openwrt.org/toh/tp-link/cpe510">https://openwrt.org/toh/tp-link/cpe510</a></p>
+</li>
+</ul>
+<h4 id="archer-ax23-v1">Archer AX23 v1</h4>
+<p><img src="https://openwrt.org/_media/media/tplink/archer_ax23.jpeg?w=500&tok=252bd5"></p>
+<p>Com as versões antigas do LibreMesh, um roteador amplamente utilizado que quase não está mais no mercado é o TP-Link Archer C7, e um bom substituto para ele poderia ser o Archer AX23. Ao comparar o Archer C7 com o mais recente Archer AX23, torna-se evidente que o AX23 representa um avanço significativo na tecnologia de redes. Enquanto o Archer C7 V1 tem sido uma escolha confiável para redes comunitárias, o AX23 o supera em vários aspectos. O Archer AX23 introduz a tecnologia Wi-Fi 6, oferecendo velocidades significativamente mais rápidas e melhor desempenho geral da rede em comparação com o padrão Wi-Fi 5 mais antigo utilizado pelo Archer C7 V1. Com recursos como capacidade aumentada e eficiência aprimorada no manuseio de vários dispositivos simultaneamente, o AX23 atende às crescentes necessidades de conectividade das redes comunitárias contemporâneas. Além disso, o AX23 incorpora tecnologias avançadas como MU-MIMO e Beamforming, contribuindo para uma conexão sem fio mais estável e eficiente. À medida que as redes comunitárias evoluem, o Archer AX23 surge como uma solução superior e pronta para o futuro, oferecendo capacidades aprimoradas para atender às demandas do cenário digital em constante mudança.</p>
+<p>1 - Faça login no sistema TP-Link &gt; faça o upload do firmware.
+2 - Escolha o firmware.</p>
+<p>Após reiniciar, o roteador funciona com o LibreMesh, mas por algum motivo, o sistema não veio com a faixa de IP correta conforme esperado. Tentei usar o firmware sysupgrade e o roteador quebrou. Para recuperar, mantenha pressionado o botão de reset enquanto liga o roteador e solte o botão de reset quando apenas o LED WAN laranja estiver aceso, em seguida, faça o upload do firmware de fábrica da TP-Link.</p>
+<ul>
+<li>
+<p>Oficial Page - <a href="https://www.tp-link.com/my/home-networking/wifi-router/archer-ax23/">https://www.tp-link.com/my/home-networking/wifi-router/archer-ax23/</a></p>
+</li>
+<li>
+<p>Ref.
+1 - <a href="https://openwrt.org/toh/tp-link/archer_ax23_v1">https://openwrt.org/toh/tp-link/archer_ax23_v1</a>
+2 - <a href="https://forum.openwrt.org/t/add-support-for-tp-link-ax23-v1/130746/55?page=2">https://forum.openwrt.org/t/add-support-for-tp-link-ax23-v1/130746/55?page=2</a></p>
+</li>
+</ul>
+<h4 id="nanostation-ac-loco-airos-v879">Nanostation Ac Loco (airOs v8.7.9)</h4>
+<p><img src="https://openwrt.org/_media/media/ubiquiti/nanostation_ac_back.jpg?cache=&w=334&h=600&tok=1c5527"></p>
+<p>Por ter dois rádios de 5.8GHz, este equipamento é muito interessante para uso em redes comunitárias. Podemos usar um rádio para a malha e o outro para se conectar aos clientes, o que é crucial para estabelecer uma rede de malha mais estável, evitando problemas como o <a href="https://en.wikipedia.org/wiki/Hidden_node_problem">problema do nó oculto</a>.</p>
+<p>Neste caso, o roteador estava inicialmente equipado com a versão 8.7.9 do airOS da Ubiquiti. No entanto, precisei fazer o downgrade para a versão 8.7.0. Infelizmente, o sistema estava restrito e não permitia a instalação de versões mais antigas do firmware.</p>
+<p>O que tornou este equipamento mais desafiador é um problema que nem mesmo a comunidade do OpenWrt conseguiu resolver ainda, conforme descrito <a href="https://forum.openwrt.org/t/installing-openwrt-on-nanostation-5ac-loco/71035">neste post</a>.</p>
+<p><strong>Hipóteses investigadas</strong></p>
+<p>1 - Remover parte do programa de atualização de firmware que verifica a versão do arquivo candidato para uma atualização, conforme descrito nos <a href="https://openwrt.org/toh/ubiquiti/common">procedimentos comuns para ubiquitis</a></p>
+<p>Com acesso ao terminal SSH, tentei criar um novo arquivo de atualização.</p>
+<pre tabindex="0"><code>WA# hexdump -Cv /bin/ubntbox | sed &#39;s/14 40 fe fe/00 00 00 00/g&#39; | hexdump -R &gt; /tmp/fwupdate.real
+WA# chmod +x /tmp/fwupdate.real 
+WA# /tmp/fwupdate.real -m WA.v8.7.0.42152.200203.1256.bin 
+Invalid version &#39;WA.ar934x.v8.7.0.42152.200203.1256&#39;
+</code></pre><p>mas não funcionou.</p>
+<p>2 - Utilize o binário do programa de atualização de versão que aceita atualizações:</p>
+<p>Como não é possível fazer o downgrade do sistema, foi feita uma tentativa de extrair o binário que verifica o arquivo de atualização da versão anterior, o que já está documentado sobre como proceder.</p>
+<p>Assim, utilizando o comando binwalk, extraí os arquivos binários de uma versão WA.ar934x.v8.7.0.42152.200203.1256 do airOS.</p>
+<pre tabindex="0"><code>binwalk -Me WA.v8.7.0.42152.200203.1256.bin
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Ubiquiti firmware header, header size: 264 bytes, ~CRC32: 0x8E4EB358, version: &#34;WA.ar934x.v8.7.0.42152.200203.1256&#34;
+268           0x10C           Ubiquiti partition header, header size: 56 bytes, name: &#34;PARTu-boot&#34;, base address: 0x9F000000, data size: 231788 bytes
+115476        0x1C314         Certificate in DER format (x509 v3), header length: 4, sequence length: 64
+143220        0x22F74         U-Boot version string, &#34;U-Boot 1.1.4-s1102 (Mar  5 2019 - 17:13:19)&#34;
+143508        0x23094         CRC32 polynomial table, big endian
+224688        0x36DB0         CRC32 polynomial table, big endian
+232120        0x38AB8         Ubiquiti partition header, header size: 56 bytes, name: &#34;PARTkernel&#34;, base address: 0x9F050000, data size: 991878 bytes
+232176        0x38AF0         uImage header, header size: 64 bytes, header CRC: 0xA68651F0, created: 2020-02-03 11:03:06, image size: 991814 bytes, Data Address: 0x80002000, Entry Point: 0x80002000, data CRC: 0x6458CA58, OS: Linux, CPU: MIPS, image type: OS Kernel Image, compression type: lzma, image name: &#34;MIPS Ubiquiti Linux-2.6.32.68&#34;
+232240        0x38B30         LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 2844788 bytes
+1224062       0x12AD7E        Ubiquiti partition header, header size: 56 bytes, name: &#34;PARTrootfs&#34;, base address: 0x9F150000, data size: 7995392 bytes
+1224118       0x12ADB6        Squashfs filesystem, little endian, version 4.0, compression:lzma, size: 7675509 bytes, 988 inodes, blocksize: 262144 bytes, created: 2020-02-03 11:03:08
+9219518       0x8CADBE        Ubiquiti firmware additional data, name: script, size: 398 bytes, size2: 398 bytes, CRC32: 8fdcf4e2
+9219574       0x8CADF6        gzip compressed data, from Unix, last modified: 2020-02-03 11:01:05
+9219980       0x8CAF8C        Signed Ubiquiti end header, RSA 2048 bit, header size: 264 bytes
+</code></pre><p>Assim, na pasta de binários, encontrei o arquivo ubntbox, que serve como o alvo para o link simbólico direcionado do arquivo fwupdate.real. Copiando este binário para o roteador, obtive a seguinte saída:</p>
+<pre tabindex="0"><code>WA# /tmp/fwupdate.real -m openwrt-ubnt_initramfs.bin 
+/tmp/fwupdate.real: can&#39;t load library &#39;libssl.so.1.0.0&#39;
+</code></pre><p>In other words, we need a library for this binary to work since this library has been updated in the new version. I also tried to create a symbolic link from the newer library to this one, but it wasn&rsquo;t possible to create a symbolic link because the system is set to read-only.</p>
+<pre tabindex="0"><code>WA# ln -s /lib/libssl.so.1.1 /lib/libssl.so.1.0.0
+ln: /lib/libssl.so.1.0.0: Read-only file system
+</code></pre><p>3 - Acessando o u-boot e carregando o firmware na memória flash</p>
+<p>Para acessar o u-boot, tive que conectá-lo via porta serial. Para fazer isso, tive que soldar um adaptador flash-serial na circuitaria do roteador e fazer uma conexão USB com o computador para acessar o u-boot do roteador.</p>
+<p><img src="https://md.coolab.org/uploads/upload_1d1e3f638320c6fb7441a1be27dfa3f1.jpg"></p>
+<p>Assim que o sistema começa a inicializar, recebemos uma mensagem dizendo Pressione qualquer tecla para interromper a inicialização automática: 0. Pressionar Enter neste ponto interrompe o sistema de inicialização.</p>
+<pre tabindex="0"><code>U-Boot 1.1.4-s1102 (Mar  5 2019 - 17:13:19)
+
+DRAM:  64 MB
+Flash: 16 MB (0xc2, 0x20, 0x18)
+PCIe WLAN Module found (#1).
+Net:   AR8035
+eth0, eth1
+Board: Ubiquiti Networks AR9342 board (e7fa-141334.1123.0030.0031)
+Radio: 0777:e7fa
+Reset: Normal
+Hit any key to stop autoboot:  0 
+ar7240&gt; 
+ar7240&gt; 
+ar7240&gt; 
+</code></pre><p>Agora que você tem acesso ao terminal, você pode iniciar o processo de inicialização usando o comando tftpboot.</p>
+<pre tabindex="0"><code>ar7240&gt; tftpboot
+*** Warning: no boot file name; using &#39;1401A8C0.img&#39;
+Using eth0 device
+TFTP from server 192.168.1.254; our IP address is 192.168.1.20
+Filename &#39;1401A8C0.img&#39;.
+Load address: 0x81000000
+Loading: T T T T 
+Retry count exceeded; starting again
+Invalid speed detected
+*** Warning: no boot file name; using &#39;1401A8C0.img&#39;
+</code></pre><p>Simultaneamente, em um computador, você precisa criar um servidor TFTP com um IP fixo em 192.168.1.254 e servir um arquivo chamado 1401A8C0.img. Este arquivo deve ser uma imagem initramfs do OpenWrt, neste caso, LibreMesh.</p>
+<p>Assim que o arquivo for enviado, inicialize o sistema com bootm. Uma vez que o sistema tenha inicializado, você terá acesso a um terminal dentro do OpenWrt para realizar a atualização final.</p>
+<pre tabindex="0"><code>root@OpenWrt:/tmp# mtd -r write /tmp/libremesh-master-ow23.05.2-default-ath79-generic-ubnt_nanostation-ac-loco-squashfs-sysupgrade.bin firmware
+Unlocking firmware ...
+
+Writing from /tmp/libremesh-master-ow23.05.2-default-ath79-generic-ubnt_nanostation-ac-loco-squashfs-sysupgrade.bin to firmware .
+</code></pre><p>O sistema não funcionou exatamente como esperado, mas está em execução com o LibreMesh. No final, quando o rádio é acessado, o roteador trava e exibe esta mensagem no serial:</p>
+<pre tabindex="0"><code>[  170.973497] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  170.981767] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  170.989976] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  170.998244] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.006297] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.014288] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.022518] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.030505] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.038691] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.046727] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+[  171.060059] jffs2: Node CRC ffffffff != calculated CRC f09e7845 for node at 007e5098
+</code></pre><ul>
+<li>
+<p>Oficial Page - <a href="https://store.ui.com/us/en/products/loco5ac">https://store.ui.com/us/en/products/loco5ac</a></p>
+</li>
+<li>
+<p>Datasheet - <a href="https://dl.ubnt.com/datasheets/NanoStation_AC/NanoStation_AC_DS.pdf">https://dl.ubnt.com/datasheets/NanoStation_AC/NanoStation_AC_DS.pdf</a></p>
+</li>
+<li>
+<p>Ref.
+1 - <a href="https://openwrt.org/toh/ubiquiti/nanostation_ac_loco">https://openwrt.org/toh/ubiquiti/nanostation_ac_loco</a>
+2 - <a href="https://openwrt.org/toh/ubiquiti/common">https://openwrt.org/toh/ubiquiti/common</a>
+3 - <a href="https://ui.com/download/airmax-ac">https://ui.com/download/airmax-ac</a>
+4 - <a href="https://massmesh.org/wiki/index.php?title=Ubiquiti_NanoStation_5AC_Loco">https://massmesh.org/wiki/index.php?title=Ubiquiti_NanoStation_5AC_Loco</a>
+5 - <a href="https://forum.openwrt.org/t/install-openwrt-on-an-ubiquiti-nanostation-ac-loco/53574">https://forum.openwrt.org/t/install-openwrt-on-an-ubiquiti-nanostation-ac-loco/53574</a>
+6 - <a href="https://forum.openwrt.org/t/installing-openwrt-on-nanostation-5ac-loco/71035">https://forum.openwrt.org/t/installing-openwrt-on-nanostation-5ac-loco/71035</a></p>
+</li>
+</ul>
+<h3 id="conclusão">Conclusão</h3>
+<p>O Tplink eap225 outdoor v3 e o cpe510 v3 funcionaram superbamente, alguns problemas relacionados a algumas questões em aberto no projeto libremesh já estão visíveis para serem corrigidos e devem ser ótimas opções para redes comunitárias em 2024.
+O loco ac Loco (e similares) e ax23 devem ser opções em breve assim que encontrarmos os problemas com esses erros. Não parece ser tão difícil uma vez que o firmware tenha sido gravado na memória do roteador e tenha concluído o processo de inicialização.
+Os erros encontrados serão relatados e ainda será necessário algum trabalho para resolvê-los.</p>
+
+        </p>
+
+        <div class="post-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hiurequeiroz-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+<div class="prev-post">
+    <p>
+        <a href="/pt/posts/libremeshlokal/">
+            &#8592;
+            Anterior:
+            Como criar uma rede Libremesh com Servidor Lokal
+        </a>
+    </p>
+    <p class="prev-post-date">
+        junho 14, 2023
+    </p>
+</div>
+
+
+
+
+            
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Hiure</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

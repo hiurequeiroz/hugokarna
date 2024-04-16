@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CommunityNetworks on Hiure Queiroz</title>
+    <link>http://localhost:1313/tags/communitynetworks/</link>
+    <description>Recent content in CommunityNetworks on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/communitynetworks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use Ubus in Libremesh</title>
+      <link>http://localhost:1313/posts/how-to-use-ubus-in-libremesh/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-use-ubus-in-libremesh/</guid>
+      <description>Introduction to Ubus in Libremesh for Beginners Step 1: What is Ubus and Libremesh Ubus is a powerful tool for managing mesh networks based on OpenWrt, such as Libremesh. It facilitates communication between system processes, providing a comprehensive information base. Learn more about Ubus and Libremesh. Since Ubus is a program installed within the router, you need to access the router&amp;rsquo;s terminal See how to do it here&#xA;Step 2: Basic Ubus Commands To get started, you can use the ubus list command to list available objects and ubus call to invoke a specific service.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Hiure Queiroz</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bamboo Tower</title>
+      <link>http://localhost:1313/projects/torrebambu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/torrebambu/</guid>
+      <description>Introduction The bamboo tower project was sponsored by APC to share with the Connect the Unconnected program.&#xA;This project was selected for the Internet Forum Film Festival in Stockholm.&#xA;Watch the movie&#xA;During the Covid-19 pandemic, I proposed through the groups that permeate me like coolab and PSP, prototyping a bamboo tower construction as a specific contribution to a more inclusive and locally developed Community Network infrastructure.&#xA;First, I did a lot of research on the subject and the possibility of building a bamboo tower.</description>
+    </item>
+    <item>
+      <title>Libremesh</title>
+      <link>http://localhost:1313/projects/libremesh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/libremesh/</guid>
+      <description>Libremesh In the realm of open-source community networks, LibreMesh stands out as an essential tool for building autonomous and decentralized network infrastructures. Recently, the LibreMesh community made an exciting announcement, revealing the release of new versions aligned with the latest updates from OpenWrt. This development marks a crucial step in keeping pace with the rapid evolution of the network hardware market.&#xA;The significance of this update cannot be underestimated, especially in an environment where new hardware versions are constantly being introduced.</description>
+    </item>
+    <item>
+      <title>Lokal</title>
+      <link>http://localhost:1313/projects/lokal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/lokal/</guid>
+      <description>Lokal I played a crucial role in the Lokal project, focusing on the installation and configuration of Libremesh on the routers to establish a robust mesh network. This setup was essential for ensuring the seamless operation of Lokal within a mesh network environment. For detailed technical insights into this aspect of the project, please refer to this link.</description>
+    </item>
+    <item>
+      <title>Parceria Educacional</title>
+      <link>http://localhost:1313/projects/parceriaeducacional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/parceriaeducacional/</guid>
+      <description>I have been dedicated to creating educational materials in collaborative learning initiatives, in partnership with Digital Democracy, Article 19, APC, and other institutions. Together, at Coolab, we create inspiring and impactful educational materials, promoting knowledge and awareness in various areas.</description>
+    </item>
+    <item>
+      <title>Rede Comunitária PSP</title>
+      <link>http://localhost:1313/projects/psp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/psp/</guid>
+      <description>PSP is a civil society association that manages and maintains a community telecommunication infrastructure in the Souzas neighborhood, Monteiro Lobato - São Paulo, Brazil.&#xA;This was the coolab collective&amp;rsquo;s most vital experience in funding and maintaining all the technical needs of a community network.&#xA;See the movie</description>
+    </item>
+    <item>
+      <title>Research Project: Low Power Communication for Social Technology</title>
+      <link>http://localhost:1313/projects/researchsocialtech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/researchsocialtech/</guid>
+      <description>Draft Project This project proposes the development of an innovative framework for creating social technology aimed at low-income communities and/or family farmers preferably associated with community networks. The main objective is to design a technological matrix that includes a form of low-power analog communication between sensors. This communication will be enabled through the use of sustainable energy technologies, such as thermoelectric generators (TEGs) and water-activated paper batteries.&#xA;The inclusion of these communities in community network ecosystems is essential, as these networks provide a collaborative environment and knowledge exchange, allowing communities to access groups involved in the connectivity process in their territories.</description>
+    </item>
+    <item>
+      <title>Sitio Do Astronauta</title>
+      <link>http://localhost:1313/projects/sitiodoastronauta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sitiodoastronauta/</guid>
+      <description>As the creator of Sítio do Astronauta, a collective of artists, activists, and researchers working with free and community technologies, I bring my academic experience in science and my learning in reverse engineering as a hacktivist. Realizing the gap between academia and society, I decided to create this collective to communicate and bring science and technology to communities in a different way. Sítio do Astronauta was conceived not only from my vision of exploring the frontiers of technology and art but also with the essential collaboration of Marcela Guerra.</description>
+    </item>
+  </channel>
+</rss>

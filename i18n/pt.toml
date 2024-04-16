@@ -1,0 +1,16 @@
+[Recent]
+  other = 'Recentes'
+[error404]
+  other = 'Esta página não existe, tente novamente a partir do'
+[home]
+  other = 'início'
+[nothing]
+  other = 'Ainda não há nada aqui 😉'
+[previous]
+  other = 'Anterior'
+[next]
+  other = 'Próximo'
+[tags]
+  other = 'Tags'
+[About]
+  other = 'Sobre'

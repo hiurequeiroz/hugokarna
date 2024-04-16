@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/projects/</link>
+    <description>Recent content in Projects on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <atom:link href="http://localhost:1313/pt/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Libremesh</title>
+      <link>http://localhost:1313/pt/projects/libremesh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/libremesh/</guid>
+      <description>Libremesh Nos meandros das redes comunitárias de código aberto, o LibreMesh se destaca como uma ferramenta essencial para a construção de infraestruturas de rede autônomas e descentralizadas. Recentemente, a comunidade do LibreMesh fez um anúncio empolgante, revelando o lançamento de novas versões alinhadas com as últimas atualizações do OpenWrt. Esse desenvolvimento marca um passo crucial para acompanhar a rápida evolução do mercado de hardware de rede.&#xA;A importância dessa atualização não pode ser subestimada, especialmente em um ambiente onde novas versões de hardware estão constantemente sendo introduzidas.</description>
+    </item>
+    <item>
+      <title>Lokal</title>
+      <link>http://localhost:1313/pt/projects/lokal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/lokal/</guid>
+      <description>Lokal Eu desempenhei um papel crucial no projeto Lokal, focando na instalação e configuração do Libremesh nos roteadores para estabelecer uma rede mesh robusta. Essa configuração foi essencial para garantir a operação sem falhas do Lokal dentro de um ambiente de rede mesh. Para informaçẽs técnicas mais detalhadas sobre esse projeto, consulte este link.</description>
+    </item>
+    <item>
+      <title>Parceria Educacional</title>
+      <link>http://localhost:1313/pt/projects/parceriaeducacional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/parceriaeducacional/</guid>
+      <description>Tenho me dedicado a criar materiais educativos em iniciativas de aprendizado colaborativo, em parceria com a Digital Democracy, Artigo 19, APC e outras instituições. Juntos, na Coolab, criamos materiais educacionais inspiradores e impactantes, promovendo o conhecimento e a consciência em diversas áreas.</description>
+    </item>
+    <item>
+      <title>Projeto de Pesquisa: Comunicação de Baixa Potência para Tecnologia Social</title>
+      <link>http://localhost:1313/pt/projects/researchsocialtech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/researchsocialtech/</guid>
+      <description>Esboço da pesquisa Este projeto propõe o desenvolvimento de um framework inovador para a criação de tecnologia social direcionada a comunidades de baixa renda e/ou agricultores familiares de preferencia associados a redes comunitárias. O objetivo principal é conceber uma matriz tecnológica que inclua uma forma de comunicação analógica de baixo consumo energético entre sensores. Essa comunicação será viabilizada através da utilização de tecnologias de energia sustentável, como os geradores termoelétricos (TEG) e baterias de papel ativadas por água.</description>
+    </item>
+    <item>
+      <title>Rede Comunitária PSP</title>
+      <link>http://localhost:1313/pt/projects/psp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/psp/</guid>
+      <description>PSP é uma associação da sociedade civil que gerencia e mantém uma infraestrutura de telecomunicações comunitária no bairro dos Souzas, Monteiro Lobato - São Paulo, Brasil.&#xA;Esta foi a experiência mais vital do coletivo coolab em financiar e manter todas as necessidades técnicas de uma rede comunitária.&#xA;Veja o filme</description>
+    </item>
+    <item>
+      <title>Sitio Do Astronauta</title>
+      <link>http://localhost:1313/pt/projects/sitiodoastronauta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/sitiodoastronauta/</guid>
+      <description>Como idealizador do Sítio do Astronauta, um coletivo de artistas, ativistas e pesquisadores que trabalham com tecnologias livres e comunitárias, trago minha experiência acadêmica com ciencia e minha aprendizado em egenharia reversa com hackerativista. Percebendo a distância entre a academia e a sociedade, decidi criar este coletivo para comunicar e levar a ciência e a tecnologia de outra maneira para as comunidades. O Sitio do Astronauta foi concebido não apenas a partir da minha visão de explorar as fronteiras da tecnologia e da arte, mas também contou com a colaboração essencial de Marcela Guerra.</description>
+    </item>
+    <item>
+      <title>Torre de Bambu</title>
+      <link>http://localhost:1313/pt/projects/torrebambu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/projects/torrebambu/</guid>
+      <description>Introdução O projeto da torre de bambu foi patrocinado pela APC para compartilhar com o programa Conectar os Não Conectados.&#xA;Este projeto foi selecionado para o festival de cinema do Fórum da Internet em Estocolmo.&#xA;Veja o filme&#xA;Durante a pandemia de Covid-19, propus através dos grupos que me permeiam como coolab e PSP, prototipar uma construção de torre de bambu como uma contribuição específica para uma infraestrutura de Rede Comunitária mais inclusiva e localmente desenvolvida.</description>
+    </item>
+  </channel>
+</rss>

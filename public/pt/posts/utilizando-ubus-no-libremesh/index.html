@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Como Usar o Ubus no Libremesh</title>
+    <meta name="description" content="Com o pacote de ferramentas Ubus você pode mexer em tudo que é configuração no seu libremesh.">
+    <meta name="keywords" content='RedesComunitarias, libremesh'>
+
+    <meta property="og:url" content="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Como Usar o Ubus no Libremesh">
+    <meta property="og:description" content="Com o pacote de ferramentas Ubus você pode mexer em tudo que é configuração no seu libremesh.">
+    <meta property="og:image" content="http://localhost:1313/images/terminal.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/terminal.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Como Usar o Ubus no Libremesh">
+    <meta name="twitter:description" content="Com o pacote de ferramentas Ubus você pode mexer em tudo que é configuração no seu libremesh.">
+    <meta property="twitter:domain" content="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">
+    <meta property="twitter:url" content="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/">
+    <meta name="twitter:image" content="http://localhost:1313/images/terminal.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.8fc23566eb4c2080d022d7fb45da320f7853e9271a8433c0d50967ed0d3b7484.js" integrity="sha256-j8I1ZutMIIDQItf7RdoyD3hT6ScahDPA1Qln7Q07dIQ="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/pt/">
+                <img src='/images/perfil.png' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/pt/">Hiure Queiroz</a>
+        </div>
+
+        <div class="i18n">
+                
+
+
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> Sobre </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projetos </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/about/"><span data-feather='meh'></span> About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/posts/"><span data-feather='book'></span> Blog </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/pt/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/hiurequeiroz"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="banner">
+    
+    
+    
+        
+        
+            <img src="/images/terminal_huefada02c9f84618ce7e157d94a36d523_64464_300x700_crop_box_center_3.png" width="250" height="224">
+        
+    
+
+</div>
+<div class="banner-mobile">
+    
+    
+    
+        
+        
+            <img src="/images/terminal_huefada02c9f84618ce7e157d94a36d523_64464_150x250_crop_box_top_3.png" width="150" height="224">
+        
+    
+
+</div>
+<div class="related-posts">
+    
+    
+        <h3>Related Posts</h3>
+        <ul>
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/test-new-lime/">Testando Nova Versão do LibreMesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/libremeshlokal/">Como criar uma rede Libremesh com Servidor Lokal</a></li>
+                    
+                
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">Acesso Remoto a Roteadores via SSH em redes libremesh</a></li>
+                    
+                
+            
+                
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/test-new-lime/">Testando Nova Versão do LibreMesh</a></li>
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/libremeshlokal/">Como criar uma rede Libremesh com Servidor Lokal</a></li>
+                    
+                
+                    
+                
+                    
+                        <li><a href="http://localhost:1313/pt/posts/como-ascessar-roteador-por-ssh/">Acesso Remoto a Roteadores via SSH em redes libremesh</a></li>
+                    
+                
+            
+        </ul>
+    
+</div>
+
+<div class="post container">
+    <div class="post-header-section">
+        <h1>Como Usar o Ubus no Libremesh</h1>
+        <small role="doc-subtitle">Com o pacote de ferramentas Ubus você pode mexer em tudo que é configuração no seu libremesh.</small>
+        <p class="post-date">fevereiro 14, 2021
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/redescomunitarias">RedesComunitarias</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/pt/tags/libremesh">libremesh</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <h3 id="tutorial-introdução-ao-ubus-no-libremesh-para-iniciantes">Tutorial: Introdução ao Ubus no Libremesh para Iniciantes</h3>
+<h4 id="passo-1-o-que-é-ubus-e-libremesh">Passo 1: O que é Ubus e Libremesh</h4>
+<p>O Ubus é uma ferramenta poderosa para gerenciar redes mesh baseadas em OpenWrt, como o Libremesh. Ele facilita a comunicação entre processos do sistema, fornecendo uma base completa de informações. Saiba mais sobre o <a href="https://openwrt.org/docs/techref/ubus">Ubus</a> e o <a href="https://libremesh.org">Libremesh</a>.
+Como o Ubus é um programa instalado dentro do roteador você precisa acessar o terminal do roteador <a href="/pt/posts/como-ascessar-roteador-por-ssh/">Veja como fazer isso aqui</a></p>
+<h4 id="passo-2-comandos-básicos-do-ubus">Passo 2: Comandos Básicos do Ubus</h4>
+<p>Para começar, você pode usar o comando <code>ubus list</code>  para listar os objetos disponíveis e <code>ubus call</code> para chamar um serviço específico. Veja a sintaxe simples de uso do Ubus:</p>
+<pre tabindex="0"><code>root@conteiner:~# ubus
+Usage: ubus [&lt;options&gt;] &lt;command&gt; [arguments...]
+Options:
+ -s &lt;socket&gt;:		Set the unix domain socket to connect to
+ -t &lt;timeout&gt;:		Set the timeout (in seconds) for a command to complete
+ -S:			Use simplified output (for scripts)
+ -v:			More verbose output
+ -m &lt;type&gt;:		(for monitor): include a specific message type
+			(can be used more than once)
+ -M &lt;r|t&gt;		(for monitor): only capture received or transmitted traffic
+
+Commands:
+ - list [&lt;path&gt;]			List objects
+ - call &lt;path&gt; &lt;method&gt; [&lt;message&gt;]	Call an object method
+ - listen [&lt;path&gt;...]			Listen for events
+ - send &lt;type&gt; [&lt;message&gt;]		Send an event
+ - wait_for &lt;object&gt; [&lt;object&gt;...]	Wait for multiple objects to appear on ubus
+ - monitor				Monitor ubus traffic
+</code></pre><h4 id="passo-3-explorando-serviços-do-ubus">Passo 3: Explorando Serviços do Ubus</h4>
+<p>Ao usar <code>ubus list</code>, você pode ver os serviços disponíveis, como os relacionados ao Lime-utils, que oferecem funcionalidades úteis para o Libremesh. Por exemplo, ao chamar <code>ubus -v list lime-utils</code>, você pode ver os métodos disponíveis:</p>
+<pre tabindex="0"><code>root@conteiner:~# ubus list
+dnsmasq
+hostapd.wlan0-ap
+hostapd.wlan0-apname
+lime-batman-adv
+lime-fbw
+lime-groundrouting
+lime-location
+lime-metrics
+lime-openairview
+lime-utils
+log
+network
+network.device
+network.interface
+network.interface.lan
+network.interface.lm_net_batadv_dummy_if
+network.interface.lm_net_br_lan_anygw_if
+network.interface.lm_net_eth0_1_babeld_if
+network.interface.lm_net_eth0_babeld_if
+network.interface.lm_net_eth1_babeld_if
+network.interface.lm_net_eth1_batadv_if
+network.interface.lm_net_wlan0_mesh
+network.interface.lm_net_wlan0_mesh_babeld_if
+network.interface.lm_net_wlan0_mesh_batadv_if
+network.interface.lm_net_wlan1_mesh
+network.interface.lm_net_wlan1_mesh_babeld_if
+network.interface.lm_net_wlan1_mesh_batadv_if
+network.interface.loopback
+network.interface.wan
+network.interface.wan6
+network.rrdns
+network.wireless
+pirania
+pirania-app
+service
+session
+system
+uci
+</code></pre><h4 id="passo-4-chamando-serviços-com-ubus">Passo 4: Chamando Serviços com Ubus</h4>
+<p>Vamos chamar o serviço <code>lime-utils</code> usando o comando <code>ubus call lime-utils get_cloud_nodes</code> para obter uma lista de nós na rede mesh:</p>
+<pre tabindex="0"><code>root@conteiner:~# ubus call lime-utils get_cloud_nodes
+{
+	&#34;nodes&#34;: [
+		&#34;alessandra&#34;,
+		&#34;anapaula&#34;,
+		&#34;arcanjo&#34;,
+		...
+	],
+	&#34;status&#34;: &#34;ok&#34;
+}
+</code></pre><h4 id="passo-5-interpretação-dos-resultados">Passo 5: Interpretação dos Resultados</h4>
+<p>Ao chamar o serviço, você receberá uma lista de nós na rede mesh, como &ldquo;alessandra&rdquo;, &ldquo;anapaula&rdquo;, etc. Essas informações podem ser úteis para monitorar e gerenciar sua rede.</p>
+<h4 id="passo-6-dicas-adicionais">Passo 6: Dicas Adicionais</h4>
+<p>Explore mais serviços do Ubus, experimente diferentes comandos e lembre-se de consultar a documentação para aprender mais sobre suas capacidades.</p>
+<h4 id="passo-7-exercícios-práticos">Passo 7: Exercícios Práticos</h4>
+<p>Pratique chamando outros serviços, modificando parâmetros e explorando mais recursos do Ubus para aprofundar seu conhecimento e habilidades.</p>
+<p>Com esses passos, você estará mais preparado para utilizar o Ubus no Libremesh e aproveitar ao máximo suas funcionalidades para gerenciar sua rede mesh de forma eficiente.</p>
+<p>Uma das maneiras mais poderosas de encontrar informações na sua rede mesh baseada em openwrt é utilizando o <a href="https://openwrt.org/docs/techref/ubus">Ubus</a>. Ele fornece uma <a href="https://pt.wikipedia.org/wiki/Comunica%C3%A7%C3%A3o_entre_processos">comunicação entre processos</a> do sistema reunindo assim uma base bem completa de informação. Como ele você pode consultar sobre os processos e caracteristicas do seu sistema como também modificalos.</p>
+
+        </p>
+
+        <div class="post-comments">
+            <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hiurequeiroz-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+<div class="prev-post">
+    <p>
+        <a href="/pt/posts/como-ascessar-roteador-por-ssh/">
+            &#8592;
+            Anterior:
+            Acesso Remoto a Roteadores via SSH em redes libremesh
+        </a>
+    </p>
+    <p class="prev-post-date">
+        junho 14, 2020
+    </p>
+</div>
+
+
+
+<div class="next-post">
+    <p>
+        <a href="/pt/posts/libremeshlokal/">
+            Próximo:
+            Como criar uma rede Libremesh com Servidor Lokal
+            &#8594;
+        </a>
+    </p>
+        <p class="next-post-date">
+            junho 14, 2023
+        </p>
+</div>
+
+
+            
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Hiure</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

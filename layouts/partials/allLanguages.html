@@ -1,0 +1,10 @@
+<ul>
+    {{ range $.Site.Home.AllTranslations }}
+        {{ $currentLang := . }}
+        {{ with $.Site.GetPage (printf "%s/content/pt" $currentLang.Lang ) }}
+            {{ if and (ne .RelPermalink "") (eq .Language.Lang $currentLang.Lang) }}
+                <li><a href="{{ .RelPermalink }}">{{ $currentLang.Language.LanguageName }}</a></li>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    </ul>

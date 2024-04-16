@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{- $avatarImgSrc := .Site.Params.AvatarURL -}}
+    {{- if and (isset site.Params "avatarURL") (not (hasPrefix $avatarImgSrc "http")) -}}
+        {{- $avatarImgSrc = (urls.JoinPath $.Site.BaseURL ($.Site.Params.AvatarURL | default "")) -}}
+    {{- end -}}
+    {{- .Scratch.Set "avatarImgSrc" $avatarImgSrc -}}
+    
+    
+    
+    {{- $projectImgSrc := .Site.Params.ProjectIMG -}}
+    {{- if and (isset site.Params "projectIMG") (not (hasPrefix $projectImgSrc "http")) -}}
+        {{- $projectImgSrc = (urls.JoinPath $.Site.BaseURL ($.Site.Params.ProjectIMG | default "")) -}}
+    {{- end -}}
+    {{- .Scratch.Set "projectImgSrc" $projectImgSrc -}}
+
+
+    {{- partial "head.html" . -}}
+    <body>
+        <script type="text/javascript">
+            // Immediately set theme on page load
+            setThemeByUserPref();
+        </script>
+        {{- partial "header.html" . -}}
+        <main id="content">
+        {{- block "main" . }}{{- end }}
+        </main>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

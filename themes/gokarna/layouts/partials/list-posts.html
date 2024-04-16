@@ -1,0 +1,21 @@
+<article class="post-title">
+    <div class="post-recents">
+        <a href="{{ .Permalink }}" class="post-link">
+            {{ if isset .Params "image" }}
+                {{ $image := resources.GetMatch .Params.image }}
+                    {{ if $image }}
+                        {{ $jpg := $image.Process "jpg" }}
+                        {{ $image =  $jpg.Resize "x30" }}
+                        {{ with $image }}
+                        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="post-image post-image-left">
+                        {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ .Title }}
+        </a>
+        <div class="flex-break"></div>
+        <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>
+        
+    </div>
+</article>
+

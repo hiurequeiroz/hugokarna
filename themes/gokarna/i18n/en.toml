@@ -1,0 +1,36 @@
+[Recent]
+  other = 'Recent'
+[error404]
+  other = 'This page does not exist, go'
+[home]
+  other = 'home'
+[nothing]
+  other = 'Nothing to see here, yet 😉'
+[previous]
+  other = 'Previous'
+[next]
+  other = 'Next'
+[Tags]
+  other = 'Tags'
+[About]
+  other = 'About'
+[Projects]
+  other = 'Projects'
+[Blog]
+  other = 'Blog'
+[Hello]
+  other = 'Hello'
+["I am"]
+  other = 'I am'
+["Developer / Researcher / Physicist"]
+  other = 'Developer / Researcher / Physicist'
+["More About me"]
+  other = 'More About me'
+["Community Networks"]
+  other = 'Community Networks'
+["For more self-governing networks and more humane communications infrastructures"]
+  other = 'For more self-governing networks and more humane communications infrastructures'
+[wordCount]
+  other = '{{ .WordCount }} words'
+
+

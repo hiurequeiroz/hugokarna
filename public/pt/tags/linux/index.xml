@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/tags/linux/</link>
+    <description>Recent content in Linux on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como criar uma rede Libremesh com Servidor Lokal</title>
+      <link>http://localhost:1313/pt/posts/libremeshlokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/libremeshlokal/</guid>
+      <description>Lokal Como parte do projeto lokal, os testes com dois roteadores Archer A7 V5.8 e Unifi Mesh UAP-AC-M estão descritos abaixo&#xA;firmwares libremesh -&amp;gt; https://next.coolab.org/s/Eiz7r9xJKiXi8MA&#xA;Unifi Mesh UAP-AC-M Folha de dados Unifi -&amp;gt; http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf&#xA;Siga estes passos -&amp;gt; https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&amp;s[]=mesh#non-invasive_method_using_mtd&#xA;Breve&#xA;Vamos fazer o downgrade para uma versão mais antiga do firmware ubiquiti (ubnt.bin), instalar o firmware OpenWRT e, em seguida, instalar o firmware Libremesh.&#xA;Baixe o ubnt.bin da pasta md5sum BZ*.</description>
+    </item>
+  </channel>
+</rss>

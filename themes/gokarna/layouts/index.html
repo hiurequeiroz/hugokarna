@@ -1,0 +1,126 @@
+{{ define "main" }}
+<section class="home-about">
+	<div class="avatar">
+        {{ if isset .Site.Params "avatarurl" }}
+        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}" />
+        {{ end }}
+	</div>
+
+    <p>{{ i18n "Hello" }}</p>
+    <h1>{{ i18n "I am" }} {{ .Site.Title }}</h1>
+    {{ if isset .Site.Params "description" }}
+        <h3>{{ i18n .Site.Params.Description . }}</h3>
+    {{ end }}
+    
+    <div class="btn">
+        <a href="{{ absLangURL "about" }}">
+            <p>{{ i18n "More About me" }}</p>
+        </a>
+    </div>
+</section>
+
+<div class="flex-break"></div>
+
+{{ if isset .Site.Params "socialicons" }}
+<section class="social-icons">
+    <ul class="social-icons-list">
+        {{ range .Site.Params.SocialIcons }}
+        <li class="social-icon">
+            <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} aria-label="Learn more on {{ .name }}">
+                <img class="svg-inject" src="/svg/icons/{{ .name }}.svg" />
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
+
+{{ if os.FileExists "index-about.md" }}
+<div class="markdown-content">
+    {{ readFile "index-about.md" | markdownify }}
+</div>
+{{ end }}
+
+
+<section class="portfolio">
+    <h2>{{ i18n "My recent works" }}</h2>
+    <div class="portfolio-category">
+        <h3>{{ i18n "Development Projects" }}</h3>
+        {{ range .Site.Params.developmentProjects }}
+        <div class="project">
+            <img src="{{ .featureImage }}" alt="{{ .name }}" class="project-image">
+            <h4>{{ .name }}</h4>
+            <p><strong>{{ i18n "Technologies" }}:</strong> {{ .technologies }}</p>
+            <p><strong>{{ i18n "Description" }}:</strong> {{ .description }}</p>
+            <p><strong>{{ i18n "Challenges and Solutions" }}:</strong> {{ .challenges }}</p>
+            <p><strong>{{ i18n "Results and Impact" }}:</strong> {{ .results }}</p>
+            <p><strong>{{ i18n "Links" }}:</strong> <a href="{{ .codeLink }}">{{ i18n "Code" }}</a> | <a href="{{ .liveLink }}">{{ i18n "Live" }}</a></p>
+        </div>
+        {{ end }}
+    </div>
+    <div class="portfolio-category">
+        <h3>{{ i18n "Community Projects" }}</h3>
+        {{ range .Site.Params.communityProjects }}
+        <div class="project">
+            <img src="{{ .featureImage }}" alt="{{ .name }}" class="project-image">
+            <h4>{{ .name }}</h4>
+            <p><strong>{{ i18n "Technologies" }}:</strong> {{ .technologies }}</p>
+            <p><strong>{{ i18n "Description" }}:</strong> {{ .description }}</p>
+            <p><strong>{{ i18n "Challenges and Solutions" }}:</strong> {{ .challenges }}</p>
+            <p><strong>{{ i18n "Results and Impact" }}:</strong> {{ .results }}</p>
+            <p><strong>{{ i18n "Links" }}:</strong> <a href="{{ .codeLink }}">{{ i18n "Code" }}</a> | <a href="{{ .liveLink }}">{{ i18n "Live" }}</a></p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+
+
+<section class="home-projects">
+    <div class="project-title">
+        {{ if isset .Site.Params "projectimg" }}
+        <img class={{ .Site.Params.ProjectImgSize | default "size-m" }} src='{{ .Scratch.Get "projectImgSrc" }}' alt="{{ .Site.Params.ProjectAltTxt|default "avatar" }}" />
+        {{ end }}
+        <div>
+            <h2> {{ i18n .Site.Params.MainProject . }} </h2>
+            <p> {{ i18n .Site.Params.ProjectDescription . }} </p>
+        </div>
+    </div>
+    <div class="project-highlight">
+        {{range .Site.Params.projectVIDEO  }}
+        <div class="project-video">
+            <h3> {{ .name }}</h3>
+            <iframe class="youtube-player" type="text/html" width="420" height="315"
+            src='{{ (urls.JoinPath $.Site.Params.VideoEmbeded (.id | default ""))  }}' allowfullscreen frameborder="0">
+            </iframe>
+        </div>
+        {{ end }}
+    </div>
+    <div class="btn">
+        <a href="{{ absLangURL "projects" }}" >
+            <p>{{ i18n "Projects" }}</p>
+        </a>
+    </div>
+</section>
+
+
+{{ if isset .Site.Params "showpostsonhomepage" }}
+
+    <div class="home-posts list-posts">
+        <h2>{{ i18n (.Site.Params.ShowPostsOnHomePage | humanize) }} Posts</h2>
+
+    {{ $posts := where .Site.Pages "Params.type" "post" }}
+
+    {{ if eq .Site.Params.ShowPostsOnHomePage "popular" }}
+        {{ range $posts.ByWeight | first 4 }}
+            {{- partial "list-posts.html" . -}}
+        {{ end }}
+    {{ else if eq .Site.Params.ShowPostsOnHomePage "recent" }}
+        {{ range $posts.ByDate.Reverse | first 4 }}
+            {{- partial "list-posts.html" . -}}
+        {{ end }}
+    {{ end }}
+    </div>
+
+{{ end }}
+{{ end }}

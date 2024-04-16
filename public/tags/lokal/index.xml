@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lokal on Hiure Queiroz</title>
+    <link>http://localhost:1313/tags/lokal/</link>
+    <description>Recent content in Lokal on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/lokal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to create a Libremesh network with Lokal Server</title>
+      <link>http://localhost:1313/posts/libremeshlokal/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/libremeshlokal/</guid>
+      <description>Lokal As part of the lokal projetct the tests with two routers the Archer A7 V5.8 and Unifi Mesh UAP-AC-M are described below&#xA;libremesh firmwares -&amp;gt; https://next.coolab.org/s/Eiz7r9xJKiXi8MA&#xA;Unifi Mesh UAP-AC-M Unifi datasheet -&amp;gt; http://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf&#xA;Follow this steps -&amp;gt; https://openwrt.org/toh/ubiquiti/unifiac?s[]=unifi&amp;s[]=mesh#non-invasive_method_using_mtd&#xA;Breif&#xA;We&amp;rsquo;re going to downgrade to older ubiquiti firmware version (ubnt.bin), install OpenWRT firmware, then install Libremesh firmware.&#xA;Download ubnt.bin from the folder md5sum BZ*.bin should return: 5bb23b387defcbd1f6cda5819c7905e5 mv BZ*.bin ubnt.bin static IP (192.</description>
+    </item>
+  </channel>
+</rss>

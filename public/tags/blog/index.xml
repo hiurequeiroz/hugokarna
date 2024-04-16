@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Hiure Queiroz</title>
+    <link>http://localhost:1313/tags/blog/</link>
+    <description>Recent content in Blog on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acesso Remoto a Roteadores via SSH em redes libremesh</title>
+      <link>http://localhost:1313/posts/como-ascessar-roteador-por-ssh/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/como-ascessar-roteador-por-ssh/</guid>
+      <description>Para acessar um roteador via SSH, siga os passos abaixo. Este guia assume que você está utilizando um sistema baseado em Linux, como Debian ou Ubuntu.&#xA;Pré-requisitos Antes de começar, é necessário ter o pacote openssh-client instalado em seu sistema. Este pacote permite que você inicie conexões SSH a partir do seu terminal.&#xA;Instalação do openssh-client&#xA;Abra o terminal e execute o comando abaixo para atualizar os pacotes do seu sistema e instalar o openssh-client:</description>
+    </item>
+    <item>
+      <title>Getting to Know the Esp32</title>
+      <link>http://localhost:1313/posts/esp32/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/esp32/</guid>
+      <description>ESP32 The ESP32 is a prototyping platform with a microcontroller, similar to Arduino, but with higher performance in applications involving wifi and low power consumption. It represents an evolution of the well-known ESP8266, offering greater processing capacity.&#xA;The ESP32 is a System on a Chip (SOC) that integrates a microcontroller, wifi, and bluetooth BLE. Developed by Espressif Systems, the ESP32 has interesting features, such as:&#xA;The board contains the ESP32 chip with a built-in antenna, a usb-serial interface, and a 3.</description>
+    </item>
+  </channel>
+</rss>

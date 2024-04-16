@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redescomunitárias on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/tags/redescomunit%C3%A1rias/</link>
+    <description>Recent content in Redescomunitárias on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pt/tags/redescomunit%C3%A1rias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como Usar o Ubus no Libremesh</title>
+      <link>http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/utilizando-ubus-no-libremesh/</guid>
+      <description>Tutorial: Introdução ao Ubus no Libremesh para Iniciantes Passo 1: O que é Ubus e Libremesh O Ubus é uma ferramenta poderosa para gerenciar redes mesh baseadas em OpenWrt, como o Libremesh. Ele facilita a comunicação entre processos do sistema, fornecendo uma base completa de informações. Saiba mais sobre o Ubus e o Libremesh.&#xA;Passo 2: Comandos Básicos do Ubus Para começar, você pode usar o comando ubus list para listar os objetos disponíveis e ubus call para chamar um serviço específico.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>42 on Hiure Queiroz</title>
+    <link>http://localhost:1313/pt/categories/42/</link>
+    <description>Recent content in 42 on Hiure Queiroz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <atom:link href="http://localhost:1313/pt/categories/42/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/pt/posts/esp32/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pt/posts/esp32/</guid>
+      <description>Esp32 Created sábado 10 novembro 2018&#xA;Assim como o [Arduíno]({% post_url 2019-02-07-Arduino %}) o ESP32 também é uma plataforma de prototipagem com microcontrolador, porem um módulo de alta performance para aplicações envolvendo wifi, contando com um baixíssimo consumo de energia. É uma evolução do já conhecido ESP8266, com maior poder de processamento.&#xA;O ESP32 se caracteriza por ser um SOC (System on a Chip) contendo microcontrolador, wifi e bluetooth BLE integrados.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+[Recent]
+  other = 'Recentes'
+[error404]
+  other = 'Esta página não existe, tente novamente a partir do'
+[home]
+  other = 'início'
+[nothing]
+  other = 'Ainda não há nada aqui 😉'
+[previous]
+  other = 'Anterior'
+[next]
+  other = 'Próximo'
+[Tags]
+  other = 'Tags'
+[About]
+  other = 'Sobre'
+[Projects]
+  other = 'Projetos'
+[Blog]
+  other = 'Blog'
+[Hello]
+  other = 'Olá'
+["I am"]
+  other = 'Eu sou'
+["Developer / Researcher / Physicist"]
+  other = 'Desenvolvedor / Pesquisador / Físico'
+
+["More About me"]
+  other = 'Saiba mais'
+["Community Networks"]
+  other = 'Redes Comunitárias'
+["For more self-governing networks and more humane communications infrastructures"]
+  other = 'Por mais redes auto-governadas e infraestrutura de comunicações mais humanas'
+["Technologies"]
+  other = 'Tecnologias'
+["Description"]
+  other = 'Descrição'
+["Challenges and Solutions"]
+  other = 'Desafios e Soluções'
+["Results and Impact"]
+  other = 'Resultados e Impacto'
+["Links"]
+  other = 'Links'
+["Code"]
+  other = 'Fonte'
+["Live"]
+  other = 'Link'
+["My recent works"]
+  other = 'Meus trabalhos recentes'
